@@ -14,13 +14,17 @@ nav{
     min-height: 8vh;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
-
+.logo span{
+    font-size: 27px;
+}
 .logo{
-    color: black;
-    font-style: bold;
-    text-transform: uppercase;
+    text-transform: lowercase;
+    font-weight: 1000;
+    color: #2b2b2b;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1); 
     font-size: 20px;
     letter-spacing: 5px;
+    font-family: Helvetica Neue, sans-serif;
 }
 
 .nav-links{
@@ -68,8 +72,11 @@ nav{
 .about,.contact{
     background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
-.contact{
+.projects{
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.contact{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
 .home, 
@@ -85,8 +92,7 @@ nav{
     }
 
 }
-.home-content, 
-.about-top-content{
+.home-content{
     display: flex;
     justify-content: space-evenly;
     h1{
@@ -103,32 +109,25 @@ nav{
 .about{
     line-height: 1.5em;
     letter-spacing: 1px;
-    padding: 5% 8% 0 13%;
+    padding: 3% 8% 0 13%;
 }
 .about span{
     font-weight: 600;
 }
 
-
-.grid-container{
-    max-height: 50%;
-}
-
-//image section
-.image{
-    float: left;
-    width: 40%;
+//about top content
+.about .grid-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 
 //image container
-.circular-square{
+.about .circular-square{
     border-radius: 50%;
-    position: absolute;
     height: 400px;
     width: 400px;
     overflow: hidden;
-    margin-top: -3%;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 //image style 
@@ -139,12 +138,9 @@ nav{
   }
 
 //paragraphs 1st and 2nd section in about 
-.about .about-presentation{
-
-    float: right;
-    width: 60%;
+.about .about-info{
     margin-bottom: 15px;
-    margin-top: 7%;
+    padding-top: 15%;
 }
 
 
@@ -188,6 +184,21 @@ nav{
 }
 
 
+
+//Projects page
+.projects .grid-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.projects .grid-container div{
+    margin-top: 20px;
+
+}
+.projects .grid-container img{
+    max-height: 400px;
+
+}
 //contact page
 .contact{
     line-height: 1.5em;

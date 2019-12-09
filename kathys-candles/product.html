@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>Kathy's: Scented Nepaliano</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">Kathy's Candles 🕯</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#" data-toggle="modal" data-target="#aboutModal">About</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="CandlesCategory.html">Category</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="loginregister.html">Login/Register</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#cartModal">Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="container product-page">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a class="active" href="#">Scented Candle</a></li>
+        </ol>
+        <div class="col-sm-12 product-info">
+          <div class="row">
+            <div class="col-md-6"><img class="img-thumbnail" src="img/candle4.jpg" height="300"></div>
+            <div class="col-md-6">
+              <h3>Amazing Scented Candles (Kathy's Original)</h3>
+              <h4 class="stars"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></h4>
+              <p>It's time to be enlightened by the magic of LED.
+Available exclusively at dusk, this beautiful small white enlighten LED candle utilises e-TECH faux flame technology to give the appearance, brightness and ambiance of a flickering candle. e-TECH is a patent pending technology developed by dusk.
+Safe to use in any location, including children's bedrooms, windy outdoor areas, boats and enclosed spaces, you can use an enlighten candle and re-create the brilliance and ambiance that has until now only been provided by a traditional burning candle.
+With enlighten, the possibilities are endless. With remote control capabilities to either set on colour change or fixed colour, your enlighten candle will flicker up to 150 hours utilising 3 x AAA Batteries (included).</p>
+              <ul>
+                <li>Comes in a pack of four.</li>
+                <li>Chunky peppermint gelato shortcake caramel</li>
+                <li>Keep wicks trimmed to 6mm to ensure you get a longer, cleaner burn. A dusk wick trimmer is perfect for the correct length wick trim. Burn in a lantern, hurricane, holder or plate.</li>
+              </ul>
+              <h4>Price: <strike>$10</strike> $5</h4>
+              <hr>
+              <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#cartModal">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="title">Contact</h3>
+            <address>
+              01, 123 Road <br>
+              456, Sydney <br>
+              NSW, Australia
+            </address>
+          </div>
+          <div class="col-sm-6 footer-nav">
+            <h3 class="title">Follow Us</h3>
+            <ul>
+              <li><a class="twitter" href="#">Twitter: @kathys</a></li>
+              <li><a class="facebook" href="#">Facebook: @kathys</a></li>
+              <li><a class="instagram" href="#">Instagram: @kathys</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="cartModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">×</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp; Cart</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Stark White Candle</td>
+                  <td>$5</td>
+                  <td>5</td>
+                  <td>$25</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Lanister Red Candle</td>
+                  <td>$3</td>
+                  <td>8</td>
+                  <td>$24</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Mormont Exquisite Candle</td>
+                  <td>$15</td>
+                  <td>4</td>
+                  <td>$60</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Targarian Dragon Candle</td>
+                  <td>$8</td>
+                  <td>4</td>
+                  <td>$32</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h3>Grand Total: $141</h3>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Continue Shopping</button>
+            <button class="btn btn-primary" data-dismiss="modal">Check Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="aboutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">×</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-heart"></i>&nbsp; About Kathy's Candles</h4>
+          </div>
+          <div class="modal-body">
+            <p>Kathy’s Candles is the best candle maker. We sell a variety of different candles, as well as related items.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

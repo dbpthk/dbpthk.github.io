@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>Kathy's Candles</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">Kathy's Candles 🕯</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#" data-toggle="modal" data-target="#aboutModal">About</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="CandlesCategory.html">Category</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="loginregister.html">Login/Register</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#cartModal">Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="container">
+        <div class="alert alert-info alert-dismissible">
+          <div class="clearfix">
+            <div class="pull-right">
+              <button class="close right" data-dismiss="alert">&times</button>
+            </div>
+            <div class="pull-left">
+              <h4>Ahoy!!!</h4>
+              <p>Use coupon code FULL-MARKS for 15% discount</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container product-slider">
+        <div class="carousel slide" id="product-slider" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li class="active" data-target="#product-slider" data-slide-to="0"></li>
+            <li data-target="#product-slider" data-slide-to="1"></li>
+            <li data-target="#product-slider" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active"><img src="img/a.jpg" alt="Candle">
+              <div class="carousel-caption">French Fregrence</div>
+            </div>
+            <div class="item"><img src="img/b.jpg" alt="Candle 2">
+              <div class="carousel-caption">Italian Aroma</div>
+            </div>
+            <div class="item"><img src="img/c.jpg" alt="Candle 3">
+              <div class="carousel-caption">Birthday Candles</div>
+            </div>
+          </div><a class="left carousel-control" href="#product-slider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control" href="#product-slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+      </div>
+      <div class="container search-products">
+        <form>
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control input-lg" type="text" placeholder="Search Our Catalog" name="q"><span class="input-group-addon search-button">
+                <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button></span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container products" id="products">
+        <h2 class="title">Popular Products</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail"><img src="img/candle1.jpg">
+              <div class="caption">
+                <h4>Slithering Siberia: $3</h4>
+                <div class="btn-group btn-group-justified">
+                  <div class="btn-group" role="group"><a class="btn btn-default" href="product.html">Learn More</a></div>
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#cartModal">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail"><img src="img/candle2.jpg">
+              <div class="caption">
+                <h4>Dim Light : $5</h4>
+                <div class="btn-group btn-group-justified">
+                  <div class="btn-group" role="group"><a class="btn btn-default" href="product.html">Learn More</a></div>
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#cartModal">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail"><img src="img/candle3.jpg">
+              <div class="caption">
+                <h4>Love From Italy :$7</h4>
+                <div class="btn-group btn-group-justified">
+                  <div class="btn-group" role="group"><a class="btn btn-default" href="product.html">Learn More</a></div>
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#cartModal">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail"><img src="img/candle4.jpg">
+              <div class="caption">
+                <h4>Unconventional Aroma : $3</h4>
+                <div class="btn-group btn-group-justified">
+                  <div class="btn-group" role="group"><a class="btn btn-default" href="product.html">Learn More</a></div>
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#cartModal">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail"><img src="img/candle5.jpg">
+              <div class="caption">
+                <h4>Customizable Birthday Candle: $8</h4>
+                <div class="btn-group btn-group-justified">
+                  <div class="btn-group" role="group"><a class="btn btn-default" href="product.html">Learn More</a></div>
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#cartModal">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail"><img src="img/candle6.jpg">
+              <div class="caption">
+                <h4>Exquisite Red: $10</h4>
+                <div class="btn-group btn-group-justified">
+                  <div class="btn-group" role="group"><a class="btn btn-default" href="product.html">Learn More</a></div>
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#cartModal">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="title">Contact</h3>
+            <address>
+              01, 123 Road <br>
+              456, Sydney <br>
+              NSW, Australia
+            </address>
+          </div>
+          <div class="col-sm-6 footer-nav">
+            <h3 class="title">Follow Us</h3>
+            <ul>
+              <li><a class="twitter" href="#">Twitter: @kathys</a></li>
+              <li><a class="facebook" href="#">Facebook: @kathys</a></li>
+              <li><a class="instagram" href="#">Instagram: @kathys</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="cartModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">×</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp; Cart</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Stark White Candle</td>
+                  <td>$5</td>
+                  <td>5</td>
+                  <td>$25</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Lanister Red Candle</td>
+                  <td>$3</td>
+                  <td>8</td>
+                  <td>$24</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Mormont Exquisite Candle</td>
+                  <td>$15</td>
+                  <td>4</td>
+                  <td>$60</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Targarian Dragon Candle</td>
+                  <td>$8</td>
+                  <td>4</td>
+                  <td>$32</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <h3>Grand Total: $141</h3>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Continue Shopping</button>
+            <button class="btn btn-primary" data-dismiss="modal">Check Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="aboutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">×</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-heart"></i>&nbsp; About Kathy's Candles</h4>
+          </div>
+          <div class="modal-body">
+            <p>Kathy’s Candles is the best candle maker. We sell a variety of different candles, as well as related items.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

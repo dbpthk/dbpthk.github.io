@@ -1,0 +1,91 @@
+.content {
+  min-height: 75vh;
+}
+
+.main-nav {
+  background: #642b73;
+  background: linear-gradient(to right, #642b73, #c6426e);
+  border: none;
+  border-radius: 0;
+}
+
+.main-nav a {
+  color: #fff !important;
+}
+
+.search-products {
+  margin-top: 50px;
+}
+
+.search-products .search-button {
+  padding: 0;
+}
+
+.search-products .search-button button {
+  line-height: 32px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 0;
+}
+
+.products .title {
+  border-bottom: 1px solid #BCC;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.products .thumbnail img {
+  max-height: 150px;
+}
+
+.footer {
+  padding: 30px;
+  background: #642b73;
+  background: linear-gradient(to right, #642b73, #c6426e);
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .footer .footer-nav {
+    text-align: right;
+  }
+}
+
+.footer .footer-nav ul {
+  padding: 0;
+}
+
+.footer .footer-nav li {
+  list-style: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.footer .footer-nav a {
+  color: #fff;
+}
+
+.product-page .stars {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.product-page .product-info {
+  margin-bottom: 20px;
+}
+
+.product-page strike {
+  color: red;
+  font-size: 85%;
+}
+
+.thank-you {
+  text-align: center;
+}
+
+.thank-you .love {
+  font-size: 100px;
+  color: red;
+  margin: 50px 0;
+}
