@@ -1,3 +1,48 @@
+
+//navigation activity
+$(document).on('click', 'nav ul li', function(){
+    $(this).addClass('active').siblings().removeClass('active')
+});
+
+
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    
+    burger.addEventListener('click', () =>{
+        //toggle Nav
+        nav.classList.toggle('nav-active');
+
+        //Animate Links
+        navLinks.forEach((link, index) =>{
+            if(link.style.animation){
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5 }s`;
+            }
+        });
+
+        //Burger Animation
+        burger.classList.toggle('toggle');
+        });
+
+}
+const app = ()=> {
+    navSlide();
+}
+app();
+
+import Highway from '@dogstudio/highway';
+import Fade from './transition';
+
+const H = new Highway.Core({
+    transitions: {
+        default: Fade
+    }
+
+});
+
 //contact page contact form validation 
 
 var name = null;
@@ -48,50 +93,6 @@ window.onload = function() {
 
       })
   });
-
-//navigation activity
-$(document).on('click', 'nav ul li', function(){
-    $(this).addClass('active').siblings().removeClass('active')
-});
-
-
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-    
-    burger.addEventListener('click', () =>{
-        //toggle Nav
-        nav.classList.toggle('nav-active');
-
-        //Animate Links
-        navLinks.forEach((link, index) =>{
-            if(link.style.animation){
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5 }s`;
-            }
-        });
-
-        //Burger Animation
-        burger.classList.toggle('toggle');
-        });
-
-}
-const app = ()=> {
-    navSlide();
-}
-app();
-
-import Highway from '@dogstudio/highway';
-import Fade from './transition';
-
-const H = new Highway.Core({
-    transitions: {
-        default: Fade
-    }
-
-});
 
 
 //escape key function to close
