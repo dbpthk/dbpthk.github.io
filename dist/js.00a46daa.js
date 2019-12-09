@@ -12116,7 +12116,12 @@ var _transition = _interopRequireDefault(require("./transition"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//contact form validation 
+//contact page contact form validation 
+var name = null;
+var subject = null;
+var email = null;
+var message = null;
+
 window.onload = function () {
   document.getElementById('clear').reset();
 };
@@ -12194,7 +12199,64 @@ var H = new _highway.default.Core({
   transitions: {
     default: _transition.default
   }
-});
+}); //escape key function to close
+
+$(document).keyup(function (e) {
+  if (e.key === "Escape") {
+    // escape key maps to keycode `27`
+    document.querySelector(".modal").style.display = "none";
+  }
+}); // Open the Modal
+
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+} // Close the Modal
+
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex); // Next/previous controls
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+} // Thumbnail image controls
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  if (slides[slideIndex - 1]) {
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+  }
+}
 },{"@dogstudio/highway":"node_modules/@dogstudio/highway/build/highway.js","./transition":"js/transition.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -12223,7 +12285,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57070" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59787" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -69,7 +69,7 @@ nav{
 .home{
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
-.about,.contact{
+.about{
     background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
 .projects{
@@ -81,13 +81,14 @@ nav{
 
 .home, 
 .about,
-.contact{
+.contact,
+.projects{
     height: 92vh;
     position: absolute;
     width: 100%;
     z-index: -1;
     p{
-        margin-top: 10px;
+        margin-top: 12px;
         font-size: 16px;
     }
 
@@ -176,8 +177,6 @@ nav{
     width: 35%;
 }
 
-
-
 //paragraphs 3rd
 .about-bottom-content .paragraph3{
     margin-top: 3%;
@@ -186,19 +185,164 @@ nav{
 
 
 //Projects page
+
 .projects .grid-container{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+    margin-left: 13%;
+    margin-right: 8%;
+}
+
+.projects h1{
+    margin-left: 5px;
 }
 
 .projects .grid-container div{
-    margin-top: 20px;
-
+    padding-top: 3%;
 }
+
+//kathys candles and responsive img 
 .projects .grid-container img{
-    max-height: 400px;
+    padding-top: 2%;
+    max-width: 100%;
+}
+
+//projects images hover
+.projects .grid-container img:hover{
+    background-color: #84fab0;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    transform: scale(1.025);
+}
+
+//paragraphs inside grid 
+.projects .grid-container p{
+    max-width: 100%;
+}
+
+//nested grid project 3
+.projects .grid-container .project3{
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 40% 60%;
+    grid-column: span 2;
+}
+//paragraphs inside project3
+.projects .grid-container .project3 .info-project3{
+    padding-top: 15%;
 
 }
+
+//popup images for project 3
+/* The Modal (background) */
+.projects .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .projects .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    max-width: 30%;
+  }
+  
+  /* The Close Button */
+  .projects .close {
+    color: white;
+    position: absolute;
+    top: 9%;
+    right: 35%;
+    font-size: 25px;
+  }
+  
+  .projects .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .projects .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .projects .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .projects .prev{
+      margin-left: -15%;
+  }
+  
+  /* Position the "next button" to the right */
+  .projects .next {
+    margin-left: 75%;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .projects .prev:hover,
+  .next:hover {
+    background-color: darkgray;
+    opacity: 50%;
+  }
+  
+  /* Number text (1/3 etc) */
+  .projects .numbertext {
+    color:white;
+    font-size: 12px;
+    padding-left: 80%;
+    padding-top: 99%;
+    position: absolute;
+  }
+  
+  /* Caption text */
+  .projects .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .projects img.demo {
+    opacity: 0.6;
+  }
+  
+  .projects .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  .projects img.hover-shadow {
+    transition: 0.3s;
+  }
+
+
 //contact page
 .contact{
     line-height: 1.5em;
@@ -261,8 +405,7 @@ textarea:focus{
 
 //footer
 .footer{
-position: fixed;
-left: 0;
+position: absolute;
 bottom: 0;
 width: 100%;
 color: black;
@@ -279,7 +422,6 @@ text-align: center;
 }
 
 .top-bar a:hover{
-    transform: scale(1.1);
     color: #01695f;
 }
 
