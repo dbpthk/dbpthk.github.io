@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Contact</title>    
 </head>
-<body>
+<body class="contact-page">
     <nav>
             <div class="logo">
                 <h4><span>&#10096/&#10097</span>hruv</h4>
             </div>
                 <ul class="nav-links">
-                    <li>
-                        <a class= "nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class= "nav-link" href="./about.html">About</a>
-                    </li>
-                    <li>
-                        <a class= "nav-link" href="./projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a class= "nav-link" href="./contact.html">Contact</a>
-                    </li>
+                        <li>
+                                <a class= "nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class= "nav-link" href="./about.html">About</a>
+                            </li>
+                            <li>
+                                <a class= "nav-link" href="./projects.html">Projects</a>
+                            </li>
+                            <li class="active">
+                                <a class= "nav-link" href="./contact.html">Contact</a>
+                            </li>
                 </ul>
     
                 <div class="burger">
@@ -35,7 +35,7 @@
                     <div class="line3"></div>
                 </div>
         </nav>
-    <main data-router-wrapper>
+    <main data-router-wrapper>  
         <section data-router-view= "contact" class="contact">
             <div class="contact-content">
                 <div class="contact-presentation">
@@ -72,9 +72,10 @@
             </section>
 
                 <section class="bottom-bar">
-                <p>&copy 2019 | All rights reserved</p>
+                <p>&copy <script>document.write( new Date().getFullYear() );</script>  | All rights reserved</p>
                 </section>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>

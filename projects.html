@@ -11,26 +11,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./style/style.css">
-    <title>Home</title>    
+    <title>Projects</title>    
 </head>
-<body>
+<body class="projects-page">
     <nav>
             <div class="logo">
                 <h4><span>&#10096/&#10097</span>hruv</h4>
             </div>
-                <ul class="nav-links">
-                    <li class="active">
-                        <a class= "nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class= "nav-link" href="./about.html">About</a>
-                    </li>
-                    <li>
-                        <a class= "nav-link" href="./projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a class= "nav-link" href="./contact.html">Contact</a>
-                    </li>
+            <ul class="nav-links">
+            <li>
+                    <a class= "nav-link" href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a class= "nav-link" href="./about.html">About</a>
+                </li>
+                <li class="active">
+                    <a class= "nav-link" href="./projects.html">Projects</a>
+                </li>
+                <li>
+                    <a class= "nav-link" href="./contact.html">Contact</a>
+                </li>
                 </ul>
     
                 <div class="burger">
@@ -42,8 +42,9 @@
 
 
     
-    <main data-router-wrapper>
-        <section data-router-view= "projects"  class="projects">
+        <main data-router-wrapper>  
+        <section data-router-view= "projects"  class="projects">        
+
             <div class="projects-content">
                 <div class="grid-container">
 
@@ -66,18 +67,10 @@
                     <div class="project3">
                         <div class="project3-top-content">
                         <h1>University Project (Android Application)</h1>
-                        <a>
                             <img src="./images/iconP.png" width= "23%" onclick="openModal();currentSlide(1)" class="hover-shadow"> 
-                        </a>
-                        <a>
                             <img src="./images/homeP.png" width= "23%" onclick="openModal();currentSlide(2)" class="hover-shadow"> 
-                        </a>
-                        <a>
                             <img src="./images/loginP.png" width= "23%" onclick="openModal();currentSlide(3)" class="hover-shadow"> 
-                        </a>
-                        <a>
                             <img src="./images/logP.png" width= "23%" onclick="openModal();currentSlide(4)" class="hover-shadow"> 
-                        </a>
                     </div>
                                 <!-- The Modal/Lightbox -->
                                 <div id="myModal" class="modal">
@@ -86,27 +79,27 @@
 
                                         <div class="mySlides">
                                         <div class="numbertext">1 / 4</div>
-                                        <img src="./images/iconP.png" style="width:100%">
+                                        <img src="./images/iconP.png" style="width:75%">
                                         </div>
 
                                         <div class="mySlides">
                                         <div class="numbertext">2 / 4</div>
-                                        <img src="./images/homeP.png" style="width:100%">
+                                        <img src="./images/homeP.png" style="width:75%">
                                         </div>
 
                                         <div class="mySlides">
                                         <div class="numbertext">3 / 4</div>
-                                        <img src="./images/loginP.png" style="width:100%">
+                                        <img src="./images/loginP.png" style="width:75%">
                                         </div>
 
                                         <div class="mySlides">
                                         <div class="numbertext">4 / 4</div>
-                                        <img src="./images/logP.png" style="width:100%">
+                                        <img src="./images/logP.png" style="width:75%">
                                         </div>
 
                                         <!-- Next/previous controls -->
-                                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                        <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+                                        <div class="next" onclick="plusSlides(1)">&#10095;</div>
 
                                         <!-- Caption text -->
                                         <div class="caption-container">
@@ -114,6 +107,7 @@
                                         </div>
 
                                         <!-- Thumbnail image controls -->
+                                        <div class="thumbnail">
                                         <div class="column">
                                         <img class="demo" src="images/iconP.png" onclick="currentSlide(1)" alt="Icon">
                                         </div>
@@ -129,6 +123,7 @@
                                         <div class="column">
                                         <img class="demo" src="images/logP.png" onclick="currentSlide(4)" alt="Log Entries">
                                         </div>
+                                        </div>
 
                                     </div>
                                     </div>
@@ -142,7 +137,6 @@
 
                 </div>
             </div>
-
         </section>
     </main>
 
@@ -157,7 +151,7 @@
             </section>
 
                 <section class="bottom-bar">
-                <p>&copy 2019 | All rights reserved</p>
+                <p>&copy <script>document.write( new Date().getFullYear() );</script>  | All rights reserved</p>
                 </section>
     </div>
 
