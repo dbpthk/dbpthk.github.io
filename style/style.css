@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
 }
 
 *:before,
@@ -91,10 +92,6 @@ nav {
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
-main {
-  overflow: auto;
-}
-
 .home,
 .about,
 .contact,
@@ -112,14 +109,79 @@ main {
 }
 
 .home-content {
-  display: flex;
-  justify-content: space-evenly;
+  position: relative;
+  text-align: center;
+  color: whitesmoke;
 }
 
 .home-content h1 {
-  font-size: 50px;
-  margin-top: 5%;
-  margin-bottom: 10%;
+  font-family: Comic Sans MS header;
+  font-weight: 1000;
+  font-size: 44px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+
+.home-presentation {
+  top: 30%;
+  left: 3%;
+  transform: translate(-3%, -30%);
+  position: absolute;
+  text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.home-page .home-page-image {
+  size: cover;
+}
+
+@keyframes fader {
+  0% {
+    background: url("./laptop-images/image1.jpg");
+    background-size: cover;
+  }
+  16.67% {
+    background: url("./laptop-images/image2.jpg");
+    background-size: cover;
+  }
+  33.34% {
+    background: url("./laptop-images/image3.jpg");
+    background-size: cover;
+  }
+  50.01% {
+    background: url("./laptop-images/image4.jpg");
+    background-size: cover;
+  }
+  66.68% {
+    background: url("./laptop-images/image5.jpg");
+    background-size: cover;
+  }
+  83.35% {
+    background: url("./laptop-images/image6.jpg");
+    background-size: cover;
+  }
+  100% {
+    background: url("./laptop-images/image7.jpg");
+    background-size: cover;
+  }
+}
+
+.home-content .shuffle-images {
+  max-width: 300px;
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  transform: translate(-15%, -70%);
+  overflow: hidden;
+  background: url("./laptop-images/image2.jpg");
+  background-size: cover;
+}
+
+.home-content .crossfade-images {
+  filter: contrast(110%);
+  background-repeat: no-repeat;
+  animation: fader 18s cubic-bezier(1, 0.3, 0.3, 1) infinite;
+  background-size: cover;
 }
 
 .about {
@@ -195,13 +257,15 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5%;
-  margin-left: 13%;
+  margin-left: 8%;
   margin-right: 8%;
   padding-top: 1%;
+  letter-spacing: 1px;
 }
 
 .projects h1 {
   margin-left: 5px;
+  color: #196184;
 }
 
 .projects .grid-container img {
@@ -377,6 +441,7 @@ img.hover-shadow {
 }
 
 .contact-content h1 {
+  color: #465d7b;
   font-size: 50px;
   margin: 30px 0px;
 }
@@ -453,12 +518,14 @@ textarea:focus {
 
 @media screen and (max-width: 1280px) {
   .nav-links {
+    z-index: 1;
     width: 55%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .nav-links {
+    z-index: 1;
     width: 50%;
   }
 }
@@ -468,6 +535,7 @@ textarea:focus {
     overflow-x: hidden;
   }
   .nav-links {
+    z-index: 1;
     position: absolute;
     right: 0px;
     height: 87.5vh;
