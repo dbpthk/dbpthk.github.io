@@ -79,8 +79,7 @@ nav {
 .nav-link a:hover {
   background: #252525;
 }
-
-.nav-link::after {
+.home-page .nav-link::after {
   content: "";
   display: block;
   width: 0;
@@ -149,24 +148,27 @@ nav {
   grid-template-columns: 60% 25%;
   grid-gap: 5%;
   text-align: left;
+  color: white;
+  //position
   h1 {
     font-family: Comic Sans MS;
     font-size: 29px;
     text-transform: capitalize;
     letter-spacing: 2px;
+    color: white;
   }
+  //name
   h5 {
     font-family: Comic Sans MS;
     padding: 0 2px;
     border-top: 0px;
     border-bottom: 0px;
-    max-width: max-content;
     margin: 2px;
     text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
   }
 }
-
 .home-presentation {
+  max-width: 80%;
 }
 
 //get in touch button
@@ -180,16 +182,14 @@ nav {
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
-  border-bottom-color: #00bcd4;
-  border-top-right-radius: 40%;
-  border-bottom-left-radius: 40%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
   width: 30%;
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+  // box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 //get in touch button container
 .home-presentation .getintouch:hover {
-  transform: scale(1.1);
   cursor: pointer;
   color: rgb(60, 70, 219);
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);

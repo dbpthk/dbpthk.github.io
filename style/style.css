@@ -76,7 +76,7 @@ nav {
   background: #252525;
 }
 
-.nav-link::after {
+.home-page .nav-link::after {
   content: "";
   display: block;
   width: 0;
@@ -151,6 +151,7 @@ nav {
   grid-template-columns: 60% 25%;
   grid-gap: 5%;
   text-align: left;
+  color: white;
 }
 
 .home-content h1 {
@@ -158,6 +159,7 @@ nav {
   font-size: 29px;
   text-transform: capitalize;
   letter-spacing: 2px;
+  color: white;
 }
 
 .home-content h5 {
@@ -165,10 +167,12 @@ nav {
   padding: 0 2px;
   border-top: 0px;
   border-bottom: 0px;
-  max-width: -webkit-max-content;
-  max-width: max-content;
   margin: 2px;
   text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+}
+
+.home-presentation {
+  max-width: 80%;
 }
 
 .home-presentation .getintouch {
@@ -181,15 +185,12 @@ nav {
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
-  border-bottom-color: #00bcd4;
-  border-top-right-radius: 40%;
-  border-bottom-left-radius: 40%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
   width: 30%;
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 .home-presentation .getintouch:hover {
-  transform: scale(1.1);
   cursor: pointer;
   color: #3c46db;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
