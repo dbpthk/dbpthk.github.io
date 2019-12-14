@@ -24,7 +24,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  background: whitesmoke;
 }
 
 .logo span {
@@ -34,11 +35,18 @@ nav {
 .logo {
   text-transform: lowercase;
   font-weight: 1000;
-  color: #2b2b2b;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
   font-size: 20px;
-  letter-spacing: 5px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo h4 {
+  letter-spacing: 3px;
   font-family: Helvetica Neue, sans-serif;
+  color: #2b2b2b;
 }
 
 .nav-links {
@@ -52,15 +60,15 @@ nav {
 }
 
 .nav-links a {
-  color: black;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  color: #2b2b2b;
 }
 
 .nav-links a:hover {
-  color: #01695f;
+  color: #3c46db;
 }
 
 .burger {
@@ -77,7 +85,7 @@ nav {
 }
 
 .home-page {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .about-page {
@@ -97,7 +105,6 @@ nav {
 .contact,
 .projects {
   width: 100%;
-  z-index: -1;
 }
 
 .home p,
@@ -108,31 +115,64 @@ nav {
   font-size: 16px;
 }
 
+.home h1,
+.about h1,
+.contact h1,
+.projects h1 {
+  color: #2e302f;
+}
+
 .home-content {
-  position: relative;
-  text-align: center;
-  color: whitesmoke;
+  display: grid;
+  margin-left: 15%;
+  margin-top: 8%;
+  margin-right: 5%;
+  grid-template-columns: 60% 25%;
+  grid-gap: 5%;
+  text-align: left;
 }
 
 .home-content h1 {
-  font-family: Comic Sans MS header;
-  font-weight: 1000;
-  font-size: 44px;
+  font-family: Comic Sans MS;
+  font-size: 29px;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: 2px;
 }
 
-.home-presentation {
-  top: 30%;
-  left: 3%;
-  transform: translate(-3%, -30%);
-  position: absolute;
+.home-content h5 {
+  font-family: Comic Sans MS;
+  border: 1px solid whitesmoke;
+  padding: 0 2px;
+  border-top: 0px;
+  border-bottom: 0px;
+  max-width: -webkit-max-content;
+  max-width: max-content;
+  margin: 2px;
   text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
-  background-color: rgba(0, 0, 0, 0.25);
 }
 
-.home-page .home-page-image {
-  size: cover;
+.home-presentation .getintouch {
+  font-family: Comic Sans MS;
+  font-size: 24px;
+  margin-top: 5%;
+  padding: 1% 2%;
+  text-decoration: none;
+  border: 1px solid;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom-color: #00bcd4;
+  border-top-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  width: 30%;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+}
+
+.home-presentation .getintouch:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: #3c46db;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
 @keyframes fader {
@@ -167,27 +207,29 @@ nav {
 }
 
 .home-content .shuffle-images {
-  max-width: 300px;
-  position: absolute;
-  top: 70%;
-  left: 15%;
-  transform: translate(-15%, -70%);
-  overflow: hidden;
-  background: url("./laptop-images/image2.jpg");
-  background-size: cover;
+  top: 12%;
+  right: 10%;
+  width: 450px;
+  height: 600px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 1%;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 .home-content .crossfade-images {
-  filter: contrast(110%);
-  background-repeat: no-repeat;
-  animation: fader 18s cubic-bezier(1, 0.3, 0.3, 1) infinite;
+  max-width: 300px;
   background-size: cover;
+  animation: fader 12s cubic-bezier(0.8, -0.49, 0.36, 1) infinite;
+  animation-delay: 1s;
+  box-shadow: 0 1rem 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 .about {
   line-height: 1.5em;
   letter-spacing: 1px;
-  padding: 3% 8% 0 13%;
+  padding: 3% 8% 3% 13%;
 }
 
 .about span {
@@ -257,15 +299,18 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5%;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin: 3% 15% 3%;
   padding-top: 1%;
   letter-spacing: 1px;
 }
 
+.projects .grid-container p {
+  font-size: 14px;
+}
+
 .projects h1 {
   margin-left: 5px;
-  color: #196184;
+  font-size: 20px;
 }
 
 .projects .grid-container img {
@@ -274,14 +319,12 @@ nav {
 }
 
 .projects .grid-container a img:hover {
-  background-color: #84fab0;
   opacity: 0.7;
   filter: alpha(opacity=70);
   transform: scale(1.025);
 }
 
 .projects .project3-top-content img:hover {
-  background-color: #84fab0;
   opacity: 0.7;
   filter: alpha(opacity=70);
   transform: scale(1.025);
@@ -296,10 +339,11 @@ nav {
   grid-gap: 0;
   grid-template-columns: 40% 60%;
   grid-column: span 2;
+  margin-top: 3%;
 }
 
 .projects .grid-container .project3 .info-project3 {
-  padding-top: 8%;
+  padding-top: 5%;
 }
 
 /* Create four equal columns that floats next to eachother */
@@ -311,9 +355,9 @@ nav {
   transform: scale(1.3);
   opacity: 1;
   border: 1px solid #009688;
-  padding: 0 3px;
-  border-block-start-color: white;
-  border-block-end-color: white;
+  border-top: 0px;
+  border-bottom: 0px;
+  padding: 0 1px;
 }
 
 .thumbnail img {
@@ -322,7 +366,6 @@ nav {
 }
 
 .thumbnail img:hover {
-  background-color: #84fab0;
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -433,17 +476,25 @@ img.hover-shadow {
 .contact {
   line-height: 1.5em;
   letter-spacing: 1px;
-  padding: 5% 10% 0 20%;
+}
+
+.contact h1 {
+  font-size: 39px;
+  margin-top: 3%;
 }
 
 .contact-content {
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: -webkit-max-content auto;
+  grid-template-rows: max-content auto;
+  margin-top: 3%;
+  margin-left: 5%;
   justify-content: space-evenly;
 }
 
-.contact-content h1 {
-  color: #465d7b;
-  font-size: 50px;
-  margin: 30px 0px;
+.contact-content p {
+  margin-bottom: 20px;
 }
 
 form input[type="text"],
@@ -452,9 +503,8 @@ textarea {
   width: 100%;
   padding: 6px;
   font-size: 16px;
-  border: none;
-  border: 1px solid #222;
-  background: transparent;
+  border-radius: 2%;
+  background: #f5f5f5;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
@@ -464,20 +514,20 @@ textarea {
 form input[type="text"]:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid #009688;
+  border: 1px solid #00a4bd;
 }
 
 .contact button {
   background-color: transparent;
   text-transform: uppercase;
   padding: 12px 20px;
-  border: 1px solid #222;
+  border: 1px solid #f5f5f5;
   cursor: pointer;
   transition: all 0.35s;
 }
 
 .contact button:hover {
-  color: #01695f;
+  color: #3c46db;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
@@ -486,6 +536,15 @@ textarea:focus {
   margin-bottom: 5px;
   color: #f87272;
   font-size: 12px;
+}
+
+.contact .social-media {
+  margin-top: 3%;
+}
+
+.contact .social-media img {
+  max-width: 10%;
+  padding: 30px 40px 0 0;
 }
 
 .footer {
@@ -505,7 +564,7 @@ textarea:focus {
 }
 
 .top-bar a:hover {
-  color: #01695f;
+  color: #3c46db;
   opacity: 1;
   border: 1px solid #009688;
   border-block-start-color: white;
@@ -541,7 +600,7 @@ textarea:focus {
     height: 87.5vh;
     width: 40%;
     top: 8vh;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
