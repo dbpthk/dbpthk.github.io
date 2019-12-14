@@ -19,13 +19,16 @@ body {
 }
 
 nav {
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  background: whitesmoke;
+  min-height: 10vh;
+  background: #232526;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .logo span {
@@ -34,8 +37,6 @@ nav {
 
 .logo {
   text-transform: lowercase;
-  font-weight: 1000;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
   font-size: 20px;
 }
 
@@ -46,7 +47,11 @@ nav {
 .logo h4 {
   letter-spacing: 3px;
   font-family: Helvetica Neue, sans-serif;
-  color: #2b2b2b;
+  color: #c19f63;
+}
+
+.nav-links .nav-link {
+  padding: 10px 0px;
 }
 
 .nav-links {
@@ -62,13 +67,29 @@ nav {
 .nav-links a {
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
   font-size: 14px;
-  color: #2b2b2b;
+  color: #c19f63;
+  font-weight: lighter;
 }
 
-.nav-links a:hover {
-  color: #3c46db;
+.nav-link a:hover {
+  background: #252525;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin: auto;
+  opacity: 0;
+  height: 2px;
+  background: #c19f63;
+  transition: width 0.2s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .burger {
@@ -85,7 +106,7 @@ nav {
 }
 
 .home-page {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: #060c21;
 }
 
 .about-page {
@@ -135,13 +156,12 @@ nav {
 .home-content h1 {
   font-family: Comic Sans MS;
   font-size: 29px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 2px;
 }
 
 .home-content h5 {
   font-family: Comic Sans MS;
-  border: 1px solid whitesmoke;
   padding: 0 2px;
   border-top: 0px;
   border-bottom: 0px;
@@ -201,29 +221,55 @@ nav {
     background-size: cover;
   }
   100% {
-    background: url("./laptop-images/image7.jpg");
+    background: url("./laptop-images/image1.jpg");
     background-size: cover;
   }
 }
 
 .home-content .shuffle-images {
-  top: 12%;
+  position: absolute;
+  top: 25%;
   right: 10%;
   width: 450px;
   height: 600px;
   justify-content: center;
   display: flex;
   align-items: center;
-  border-radius: 1%;
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+  background: #060c21;
+}
+
+.home-content .shuffle-images:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.home-content .shuffle-images::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(30px);
+}
+
+.home-content .shuffle-images::before,
+.home-content .shuffle-images::after {
+  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
 }
 
 .home-content .crossfade-images {
   max-width: 300px;
-  background-size: cover;
   animation: fader 12s cubic-bezier(0.8, -0.49, 0.36, 1) infinite;
   animation-delay: 1s;
-  box-shadow: 0 1rem 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 .about {
@@ -352,12 +398,12 @@ nav {
 }
 
 .active {
-  transform: scale(1.3);
   opacity: 1;
-  border: 1px solid #009688;
-  border-top: 0px;
-  border-bottom: 0px;
   padding: 0 1px;
+}
+
+.active a {
+  color: #f1c8ab;
 }
 
 .thumbnail img {
@@ -544,7 +590,7 @@ textarea:focus {
 
 .contact .social-media img {
   max-width: 10%;
-  padding: 30px 40px 0 0;
+  padding: 30px 40px 0 20px;
 }
 
 .footer {
