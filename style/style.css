@@ -141,15 +141,17 @@ nav {
 .projects p {
   margin-top: 12px;
   font-size: 16px;
+  text-align: left;
+  letter-spacing: none;
 }
 
 .home-presentation .neon-header {
   font-size: 45px;
   position: absolute;
-  top: 20%;
+  top: 17%;
   left: 35%;
   margin: 0;
-  transform: translate(-28%, -20%);
+  transform: translate(-28%, -17%);
   color: white;
   text-shadow: 0 0 15px #00bcd4;
 }
@@ -181,13 +183,12 @@ nav {
 .home-presentation .neon-header::before,
 .home-presentation .neon-header::after {
   background: linear-gradient(235deg, #00bcd4, #060c21, #89ff00);
-  height: 70%;
 }
 
 .home-presentation .intro-box {
-  padding: 7% 2% 0;
+  padding: 7% 3% 0;
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 10%;
   height: 600px;
   width: 450px;
@@ -202,16 +203,7 @@ nav {
 }
 
 .home-presentation .intro-box h5 {
-  font-size: 29px;
-}
-
-.home-presentation .getintouch {
   font-size: 24px;
-  padding: 1% 2%;
-  right: 10%;
-  text-decoration: none;
-  margin-left: 30%;
-  cursor: pointer;
 }
 
 .home-presentation .intro-box::before {
@@ -240,6 +232,87 @@ nav {
 .home-presentation .intro-box::before,
 .home-presentation .intro-box::after {
   background: linear-gradient(235deg, #00bcd4, #060c21, #89ff00);
+}
+
+.home-presentation .getbutton a {
+  display: inline-block;
+  position: relative;
+  color: #2196f3;
+  letter-spacing: 4px;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 24px;
+  padding: 15px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.home-presentation .getbutton a:hover {
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 30px #2196f3, 0 0 60px #2196f3;
+  transition-delay: 1s;
+}
+
+.home-presentation .getbutton a span {
+  position: absolute;
+  display: block;
+}
+
+.home-presentation .getbutton a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.home-presentation .getbutton a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.home-presentation .getbutton a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.home-presentation .getbutton a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
 }
 
 @keyframes fader {
@@ -275,7 +348,7 @@ nav {
 
 .home-content .shuffle-images {
   position: absolute;
-  top: 35%;
+  top: 30%;
   right: 10%;
   width: 450px;
   height: 600px;
@@ -641,11 +714,15 @@ textarea:focus {
 }
 
 .footer {
-  margin-top: 30px;
   bottom: 0;
   width: 100%;
-  color: black;
+  padding: 20px 0 5px;
+  color: white;
   text-align: center;
+}
+
+.footer .top-bar {
+  background: whitesmoke;
 }
 
 .top-bar a {

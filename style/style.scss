@@ -148,6 +148,8 @@ nav {
   p {
     margin-top: 12px;
     font-size: 16px;
+    text-align: left;
+    letter-spacing: none;
   }
 }
 
@@ -157,10 +159,10 @@ nav {
 .home-presentation .neon-header {
   font-size: 45px;
   position: absolute;
-  top: 20%;
+  top: 17%;
   left: 35%;
   margin: 0;
-  transform: translate(-28%, -20%);
+  transform: translate(-28%, -17%);
   color: white;
   text-shadow: 0 0 15px #00bcd4;
 }
@@ -193,14 +195,13 @@ nav {
 .home-presentation .neon-header::before,
 .home-presentation .neon-header::after {
   background: linear-gradient(235deg, #00bcd4, #060c21, #89ff00);
-  height: 70%;
 }
 
 //introduction box along with background gradients
 .home-presentation .intro-box {
-  padding: 7% 2% 0;
+  padding: 7% 3% 0;
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 10%;
   height: 600px;
   width: 450px;
@@ -212,18 +213,8 @@ nav {
   background: #060c21;
   background-size: 600px 400px;
   h5 {
-    font-size: 29px;
+    font-size: 24px;
   }
-}
-
-//get in touch button
-.home-presentation .getintouch {
-  font-size: 24px;
-  padding: 1% 2%;
-  right: 10%;
-  text-decoration: none;
-  margin-left: 30%;
-  cursor: pointer;
 }
 
 .home-presentation .intro-box::before {
@@ -254,65 +245,91 @@ nav {
   background: linear-gradient(235deg, #00bcd4, #060c21, #89ff00);
 }
 
-// .home-content {
-//   display: grid;
-//   margin-left: 15%;
-//   margin-top: 8%;
-//   margin-right: 5%;
-//   grid-template-columns: 60% 25%;
-//   grid-gap: 5%;
-//   text-align: left;
-//   color: white;
-//   //position
-//   h1 {
-//     font-family: Comic Sans MS;
-//     font-size: 29px;
-//     text-transform: capitalize;
-//     letter-spacing: 2px;
-//     color: white;
-//   }
-//   //name
-//   h5 {
-//     font-family: Comic Sans MS;
-//     padding: 0 2px;
-//     border-top: 0px;
-//     border-bottom: 0px;
-//     margin: 2px;
-//     text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
-//   }
-// }
-// .home-presentation {
-//   max-width: 80%;
-// }
-
 //get in touch button
-// .home-presentation .getintouch {
-//   font-family: Comic Sans MS;
-//   font-size: 24px;
-//   margin-top: 5%;
-//   padding: 1% 2%;
-//   text-decoration: none;
-//   border: 1px solid;
-//   border-left: 0px;
-//   border-right: 0px;
-//   border-top: 0px;
-//   border-top-right-radius: 10%;
-//   border-bottom-left-radius: 10%;
-//   width: 30%;
-//   // box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
-// }
+.home-presentation .getbutton a {
+  display: inline-block;
+  position: relative;
+  color: #2196f3;
+  letter-spacing: 4px;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 24px;
+  padding: 15px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-//get in touch button container
-// .home-presentation .getintouch:hover {
-//   cursor: pointer;
-//   color: rgb(60, 70, 219);
-//   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-// }
+//hover background on get in touch button on intro. in home page
+.home-presentation .getbutton a:hover {
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 30px #2196f3, 0 0 60px #2196f3;
+  transition-delay: 1s;
+}
 
-// .home-page .home-page-image img {
-//   opacity: 30%;
-//   size: cover;
-// }
+.home-presentation .getbutton a span {
+  position: absolute;
+  display: block;
+}
+
+//for topline gradient on top of text
+.home-presentation .getbutton a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+////for line gradient on bottom of text
+.home-presentation .getbutton a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+//for line gradient on right side of text
+.home-presentation .getbutton a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+//for line gradient on left side of text
+.home-presentation .getbutton a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.home-presentation .getbutton a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
 
 //crossfade images
 @keyframes fader {
@@ -349,7 +366,7 @@ nav {
 //crossfade image container
 .home-content .shuffle-images {
   position: absolute;
-  top: 35%;
+  top: 30%;
   right: 10%;
   width: 450px;
   height: 600px;
@@ -735,11 +752,14 @@ textarea:focus {
 
 //footer
 .footer {
-  margin-top: 30px;
   bottom: 0;
   width: 100%;
-  color: black;
+  padding: 20px 0 5px;
+  color: white;
   text-align: center;
+  .top-bar {
+    background: whitesmoke;
+  }
 }
 
 .top-bar a {
