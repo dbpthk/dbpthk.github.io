@@ -11,10 +11,16 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  width: 100%;
+  height: 100%;
+}
+article {
+  min-height: 100%;
   display: grid;
-  grid-template-rows: max-content auto max-content;
-  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
 // //Navigation
@@ -192,11 +198,6 @@ nav {
   filter: blur(40px);
 }
 
-.home-presentation .neon-header::before,
-.home-presentation .neon-header::after {
-  background: linear-gradient(235deg, #00bcd4, #060c21, #89ff00);
-}
-
 //introduction box along with background gradients
 .home-presentation .intro-box {
   padding: 7% 3% 0;
@@ -209,60 +210,74 @@ nav {
   grid-template-columns: 100%;
   grid-template-rows: max-content 50% auto;
   grid-gap: 0;
-  color: whitesmoke;
-  background: #060c21;
-  background-size: 600px 400px;
+  color: #2196f3;
+  background: linear-gradient(0deg, #000, #262626);
   h5 {
     font-size: 24px;
   }
 }
 
-.home-presentation .intro-box::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
-  background: #fff;
-  z-index: -1;
-}
-
-.home-presentation .intro-box::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
-  background: #fff;
-  z-index: -2;
-  filter: blur(30px);
-}
-
 .home-presentation .intro-box::before,
 .home-presentation .intro-box::after {
-  background: linear-gradient(235deg, #00bcd4, #060c21, #89ff00);
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.home-presentation .intro-box::after {
+  filter: blur(5px);
+}
+
+//for gradient box on home page
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 //get in touch button
 .home-presentation .getbutton a {
   display: inline-block;
   position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
   color: #2196f3;
-  letter-spacing: 4px;
   text-decoration: none;
   overflow: hidden;
   font-size: 24px;
-  padding: 15px 15px;
-  text-decoration: none;
+  padding: 15px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 //hover background on get in touch button on intro. in home page
 .home-presentation .getbutton a:hover {
-  color: #255784;
+  color: #122d44;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3, 0 0 30px #2196f3, 0 0 60px #2196f3;
   transition-delay: 1s;
@@ -373,43 +388,70 @@ nav {
   justify-content: center;
   display: flex;
   align-items: center;
-  background: #060c21;
+  background: linear-gradient(0deg, #000, #262626);
+}
+
+.home-presentation .intro-box::before,
+.home-presentation .intro-box::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
 }
 
 //gradient background effect for crossfade image section
-.home-content .shuffle-images:before {
+.home-content .shuffle-images:before,
+.home-content .shuffle-images::after {
   content: "";
   position: absolute;
   top: -2px;
-  bottom: -2px;
   left: -2px;
-  right: -2px;
-  background: #fff;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
   z-index: -1;
+  animation: animate 20s linear infinite;
 }
 
 .home-content .shuffle-images::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
-  background: #fff;
-  z-index: -2;
-  filter: blur(30px);
-}
-
-.home-content .shuffle-images::before,
-.home-content .shuffle-images::after {
-  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+  filter: blur(5px);
 }
 
 //animation section
 .home-content .crossfade-images {
   max-width: 300px;
-  animation: fader 12s cubic-bezier(0.8, -0.49, 0.36, 1) infinite;
-  animation-delay: 1s;
+  animation: fader 12s linear infinite;
 }
 
 //about page
