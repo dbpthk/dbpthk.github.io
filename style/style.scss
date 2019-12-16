@@ -31,18 +31,8 @@ nav {
   padding: 10px;
   align-items: center;
   min-height: 10vh;
-  // box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #414345,
-    #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+  background: #181818;
 }
 .logo span {
   font-size: 27px;
@@ -121,9 +111,7 @@ nav {
 }
 
 .home-page {
-  // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  background: #060c21;
-  // position: relative;
+  background: linear-gradient(0deg, #000, #262626);
 }
 .about-page {
   // background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
@@ -161,60 +149,68 @@ nav {
 
 //home page
 
-//front end web designer title
-.home-presentation .neon-header {
+//top heading gradient, and my name (h5)
+.home-presentation .animated-heading,
+h5 {
+  color: #fff;
   font-size: 45px;
-  position: absolute;
-  top: 17%;
-  left: 35%;
-  margin: 0;
-  transform: translate(-28%, -17%);
-  color: white;
-  text-shadow: 0 0 15px #00bcd4;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  max-width: max-content;
+  left: 50%;
+  transform: translate(-50%);
+  position: relative;
+  margin-top: 3%;
+  animation: animateT 3s linear infinite;
 }
 
-//animating header
-.home-presentation .neon-header::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  color: #ff005b;
-  filter: blur(15px);
-}
-
-.home-presentation .neon-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  z-index: -2;
-  background: #fe3a80;
-  opacity: 0.5;
-  filter: blur(40px);
+//for changing gradient color on header text
+@keyframes animateT {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 //introduction box along with background gradients
 .home-presentation .intro-box {
-  padding: 7% 3% 0;
   position: absolute;
   top: 30%;
   left: 10%;
   height: 600px;
   width: 450px;
   display: grid;
+  justify-items: center;
   grid-template-columns: 100%;
-  grid-template-rows: max-content 50% auto;
+  grid-template-rows: 15% 60% auto;
   grid-gap: 0;
   color: #2196f3;
   background: linear-gradient(0deg, #000, #262626);
   h5 {
     font-size: 24px;
   }
+}
+
+//contents in introduction box
+.home-presentation .intro-box .myintro,
+.myname {
+  text-align: left;
+  padding: 15% 5% 0;
 }
 
 .home-presentation .intro-box::before,
@@ -264,8 +260,6 @@ nav {
 .home-presentation .getbutton a {
   display: inline-block;
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
   color: #2196f3;
   text-decoration: none;
   overflow: hidden;
@@ -799,16 +793,13 @@ textarea:focus {
   padding: 20px 0 5px;
   color: white;
   text-align: center;
-  .top-bar {
-    background: whitesmoke;
-  }
 }
 
 .top-bar a {
   margin: 5px;
   transition: all 0.35s ease-in-out;
   text-decoration: none;
-  color: #434343;
+  color: white;
   font-size: 24px;
   opacity: 0.8;
 }
@@ -816,13 +807,11 @@ textarea:focus {
 .top-bar a:hover {
   color: rgb(60, 70, 219);
   opacity: 1;
-  border: 1px solid #009688;
-  border-block-start-color: white;
 }
 
 .bottom-bar {
   font-size: 11px;
-  opacity: 1;
+  opacity: 0.6;
 }
 
 //media screens
@@ -852,7 +841,6 @@ textarea:focus {
     height: 87.5vh;
     width: 40%;
     top: 8vh;
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
