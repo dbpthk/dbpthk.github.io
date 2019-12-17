@@ -92,7 +92,7 @@ $(document).ready(function() {
     if (message.length <= 10) {
       event.preventDefault();
       statusM.append(
-        "<div>A message needs to be at least 10 characters long</div>"
+        "<div>Message needs to be at least 10 characters long</div>"
       );
     }
   });

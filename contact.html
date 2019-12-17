@@ -35,40 +35,37 @@
                     <div class="line3"></div>
                 </div>
         </nav>
-    <main data-router-wrapper>  
-        <section data-router-view= "contact" class="contact">
-            <div class="contact-content">
+    <main>  
+        <section class="contact">
                 <div class="contact-presentation">
+                    <div class="contact-title">
 
                         <h1>Get in Touch <i class="fa fa-envelope"></i></h1>
                         <p>Please fill out a quick form and I will be in touch with you soon.</p>
+                    </div>
+                    <div class="contact-form" >
                                     <form id= "clear" action="https://formspree.io/dbpthk@gmail.com"
                                     method="POST">
-                                        <label for="name">Name</label>
-                                        <input type="text" class="name" id="name" name="name">
+                                        <input type="text" class="name" placeholder="Your Name" id="name" name="name">
                                         <div class="statusN"></div>
-                                        <label for="subject">Subject</label>
-                                        <input type="text" class="subject" id="subject" name="subject">
+                                        <input type="text" class="subject" placeholder="Subject" id="subject" name="subject">
                                         <div class="statusS"> </div>
-                                        <label for="email">E-mail</label>
-                                        <input type="text" class="email" id="email" name="email">
+                                        <input type="text" class="email" placeholder="Your Email Address" id="email" name="email">
                                         <div class="statusE"> </div>
-                                        <label for="message">Message</label>
-                                        <textarea name="message" class="message" id="message" style="height: 200px" ></textarea>
+                                        <textarea name="message" class="message" id="message" placeholder="Message" style="height: 100px" ></textarea>
                                         <div class="statusM"> </div>
                                         <button type="submit" class="submit">Submit</button>
                                     </form>
                             <div class="status"></div>
                     </div>
-                    <div class="social-media">
+                </div>
+                <div class="social-media">
                         <h1> Or Message Me &#x1F447</h1>
                         <a href=""><img src="./images/messenger.svg" ></a>
                         <a href=""><img src="./images/linkenin.svg" alt=""></a>
                         <a href=""><img src="./images/insta.svg" alt=""></a>
 
-                    </div>
                 </div>
-            </div>
         </section>
     </main>
 
