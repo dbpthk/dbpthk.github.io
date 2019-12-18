@@ -117,7 +117,7 @@ nav {
 }
 
 .projects-page {
-  background: linear-gradient(0deg, #000, #262626);
+  background-image: linear-gradient(60deg, #3d3d4b, rgba(2, 2, 92, 0.76), rgba(1, 1, 29, 0.63));
 }
 
 .contact-page {
@@ -476,6 +476,7 @@ nav {
   margin: 3% 15% 3%;
   padding-top: 1%;
   letter-spacing: 1px;
+  color: #fff;
 }
 
 .projects h1 {
@@ -668,6 +669,7 @@ img.hover-shadow {
 
 .contact-title h1 {
   font-size: 32px;
+  letter-spacing: 2px;
   font-weight: 500;
   text-align: center;
 }
@@ -696,6 +698,13 @@ textarea {
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
+}
+
+form input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ec9175;
 }
 
 .contact button {

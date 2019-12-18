@@ -116,7 +116,12 @@ nav {
   background: linear-gradient(to top, #100e17, #181818, #151514);
 }
 .projects-page {
-  background: linear-gradient(0deg, #000, #262626);
+  background-image: linear-gradient(
+    60deg,
+    rgb(61, 61, 75),
+    rgba(2, 2, 92, 0.76),
+    rgba(1, 1, 29, 0.63)
+  );
 }
 .contact-page {
   background-image: linear-gradient(
@@ -549,6 +554,7 @@ nav {
   margin: 3% 15% 3%;
   padding-top: 1%;
   letter-spacing: 1px;
+  color: #fff;
 }
 
 .projects h1 {
@@ -749,6 +755,7 @@ img.hover-shadow {
 //Get in touch header and a paragraph
 .contact-title h1 {
   font-size: 32px;
+  letter-spacing: 2px;
   font-weight: 500;
   text-align: center;
   i {
@@ -780,11 +787,12 @@ textarea {
   border-bottom: 1px solid gray;
 }
 
-// form input[type="text"]:focus,
-// textarea:focus {
-//   outline: none;
-//   border: 1px solid #00a4bd;
-// }
+form input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ec9175;
+}
 
 .contact button {
   background: #ff5722;
