@@ -16,7 +16,6 @@
 html,
 body {
   min-width: 100%;
-  // min-height: 90vh;
   // overflow: hidden;
   display: grid;
   grid-template-rows: max-content auto max-content;
@@ -734,7 +733,7 @@ img.hover-shadow {
 .contact {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto max-content;
+  grid-template-rows: auto auto;
   margin-top: 40px;
   transition: all 4s ease-in-out;
   justify-items: center;
@@ -791,7 +790,7 @@ form input[type="text"]:focus,
 textarea:focus {
   outline: none;
   border: none;
-  border-bottom: 1px solid #ec9175;
+  border-bottom: 1px solid #fff;
 }
 
 .contact button {
@@ -804,7 +803,7 @@ textarea:focus {
   border: none;
   border-bottom: 1px solid gray;
   cursor: pointer;
-  width: 600px;
+  width: 700px;
   height: 50px;
   transition: all 0.5s ease-in-out;
 }
@@ -819,19 +818,92 @@ textarea:focus {
 //form input error message style
 .contact-presentation .contact-form div {
   margin-bottom: 25px;
-  color: rgb(248, 114, 114);
-  font-size: 12px;
+  color: rgb(245, 114, 114);
+  font-size: 14px;
 }
 
-//social media
-.contact .social-media {
-  margin-top: 3%;
+//social media container
+.social-media {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+//text
+.social-media .sm-header h1 {
+  margin-top: 20px;
+  font-size: 20px;
+  span {
+    font-size: 30px;
+  }
+}
+
+//each icons
+.contact .social-media .sm-buttons {
+  width: 100%;
+  text-align: center;
+  justify-items: left;
+  justify-content: left;
 }
 
 //social media icons
-.contact .social-media img {
-  max-width: 10%;
-  padding: 30px 40px 0 20px;
+.social-media .btn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #f1f1f1;
+  margin: 5px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -15px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn i {
+  line-height: 60px;
+  font-size: 24px;
+  transition: 0.2s linear;
+}
+
+//hover on social media icons
+.btn:hover i {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn:hover:before {
+  animation: media-animation 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+//for social medial icons animation
+
+@keyframes media-animation {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
 }
 
 //footer
@@ -844,14 +916,14 @@ textarea:focus {
 
 .top-bar a {
   margin: 5px;
-  transition: all 0.35s ease-in-out;
   text-decoration: none;
-  color: white;
+  color: #3498db;
   font-size: 24px;
   opacity: 0.8;
 }
 
 .top-bar a:hover {
+  transition: all 0.35s ease-in-out;
   color: rgb(60, 70, 219);
   opacity: 1;
 }
