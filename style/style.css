@@ -139,20 +139,11 @@ nav {
   background-size: cover;
 }
 
-.home,
-.about,
-.contact,
-.projects {
-  max-width: 90%;
-}
-
 .home p,
 .about p,
 .contact p,
 .projects p {
   margin-top: 12px;
-  text-align: left;
-  letter-spacing: none;
 }
 
 .home {
@@ -404,14 +395,16 @@ nav {
 }
 
 .about {
+  max-width: 80%;
+  height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 30px;
   background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
-  margin-left: 5%;
-  height: 100%;
+  margin-left: 10%;
   color: #333333;
-  padding: 3% 8% 0 13%;
+  padding: 3% 3% 3% 10%;
 }
 
 .about-info span {
@@ -422,7 +415,6 @@ nav {
 .about .grid-container {
   display: grid;
   grid-template-columns: 40% 60%;
-  padding-bottom: 30px;
 }
 
 .about .circular-square {
@@ -444,13 +436,7 @@ nav {
   padding-top: 15%;
 }
 
-.container {
-  width: 100%;
-  margin-bottom: 10px;
-  background-color: #a2a1a5;
-}
-
-.about .about-bottom-content {
+.about .skills-container {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto -webkit-max-content;
@@ -468,7 +454,6 @@ nav {
 }
 
 .myskills-container {
-  margin: 20px 0 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -776,10 +761,9 @@ img.hover-shadow {
 
 .contact {
   display: grid;
-  grid-template-columns: 20% 70%;
+  grid-template-columns: 10% 70%;
   grid-template-rows: 100%;
   margin-top: 15%;
-  margin-left: 5%;
   transition: all 2s ease-in-out;
   justify-items: center;
   justify-content: center;
@@ -787,13 +771,12 @@ img.hover-shadow {
 }
 
 .contact-presentation {
-  background-image: linear-gradient(to top, #d5d4d0b6 0%, #d5d4d0b0 1%, #eeeeecb0 31%, #efeeecb4 75%, #e9e9e7b6 100%);
-  padding: 50px 20% 50px;
-  margin-left: -20%;
-  width: 1000px;
+  background-image: linear-gradient(to top, #d5d4d0b6 0%, #d5d4d0b0 1%, #eeeeecda 31%, #efeeecb4 75%, #e9e9e7ee 100%);
+  justify-items: center;
+  justify-content: center;
+  margin-left: -15%;
+  width: 80%;
   display: grid;
-  grid-template-rows: -webkit-max-content auto;
-  grid-template-rows: max-content auto;
 }
 
 .contact .contact-title {
@@ -820,7 +803,7 @@ form {
 form input[type="text"],
 select,
 textarea {
-  width: 600px;
+  width: 700px;
   background: transparent;
   margin-bottom: 5px;
   resize: vertical;
@@ -860,7 +843,7 @@ textarea:focus {
 
 .contact-presentation .contact-form div {
   margin-bottom: 25px;
-  color: #f57272;
+  color: #fd0000;
   font-size: 14px;
 }
 
@@ -872,8 +855,6 @@ textarea:focus {
 .social-media .sm-buttons {
   width: 100%;
   text-align: center;
-  justify-items: left;
-  justify-content: left;
 }
 
 .social-media .btn {
@@ -932,34 +913,45 @@ textarea:focus {
   }
 }
 
+.about-page .footer {
+  width: 80%;
+  background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  margin-left: 10%;
+}
+
+.contact-page .footer {
+  width: 56%;
+  margin-left: 49%;
+  transform: translateX(-49%);
+  background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0b0 1%, #eeeeecda 31%, #efeeecb4 75%, #e9e9e7d7 100%);
+}
+
 .footer {
   bottom: 0;
-  width: 100%;
   text-align: center;
   padding: 10px;
   margin-top: 10%;
 }
 
-.top-bar a {
+.top-bar a .fa {
   margin: 0 5px 0;
   text-decoration: none;
-  color: #3498db;
+  color: #0099ff;
   font-size: 28px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .top-bar a:hover .fa {
   transform: translateY(-5px);
   box-shadow: 0 0 35px none;
   transition: 0.5s;
-  opacity: 1;
   cursor: pointer;
+  opacity: 1;
 }
 
 .bottom-bar p {
-  margin-top: -3px;
+  margin-top: -1px;
   font-size: 12px;
-  opacity: 0.6;
   text-align: center;
 }
 
