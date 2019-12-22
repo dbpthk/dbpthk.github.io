@@ -96,6 +96,11 @@ nav {
   opacity: 1;
 }
 
+.active a {
+  color: #fad89e;
+  border-bottom: 1px solid #c19f63;
+}
+
 .burger {
   display: none;
   cursor: pointer;
@@ -118,7 +123,8 @@ nav {
   background-size: cover;
 }
 
-.about-page {
+.about-page,
+.application-page {
   background-image: url(./background.jpg);
   background-position-x: center;
   background-position-y: center;
@@ -137,7 +143,7 @@ nav {
 }
 
 .contact-page {
-  background-image: linear-gradient(60deg, rgba(10, 10, 54, 0.116), rgba(16, 16, 73, 0.274), rgba(26, 26, 87, 0.308)), url("cover.jpg");
+  background-image: linear-gradient(60deg, rgba(15, 12, 202, 0.192), rgba(22, 22, 27, 0.13), rgba(143, 142, 223, 0.068)), url("./cover.jpg");
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -591,7 +597,7 @@ nav {
 }
 
 .projects {
-  background-image: linear-gradient(to top, #9e9d99ea 0%, #6e6e6ae1 1%, #a0a09bda 31%, #70706fe0 75%, #242422ee 100%);
+  background-image: linear-gradient(to top, #a5a4a1b6 0%, #838280b0 1%, #696968da 31%, #2e2e2db4 75%, #e9e9e7ee 100%);
   max-width: 80%;
   margin-left: 10%;
 }
@@ -603,7 +609,7 @@ nav {
   grid-gap: 5%;
   justify-items: center;
   justify-content: center;
-  margin-top: -100px;
+  padding-bottom: 40px;
 }
 
 .projects-container .card img {
@@ -612,7 +618,7 @@ nav {
 
 .projects-container .card .face {
   width: 350px;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .projects-container .card .face.face1 {
@@ -623,20 +629,16 @@ nav {
 
 .projects-container .card:hover .face.face1 {
   transform: translateY(0);
-  background: transparent;
+  background: #333;
 }
 
 .projects-container .card:hover .face.face1 h3 {
-  color: #333;
+  color: #fff;
   font-weight: 900;
 }
 
 .projects-container .card .face.face1 .content {
-  transition: 0.5s;
-}
-
-.projects-container .card:hover .face.face1 .content {
-  opacity: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .projects-container .card .face.face1 h3 {
@@ -674,11 +676,78 @@ nav {
   font-weight: 900;
   padding: 5px;
   border: 1px solid #333;
+  cursor: pointer;
 }
 
 .projects-container .card .face.face2 .content a:hover {
   background: #333;
   color: #fff;
+}
+
+.application {
+  width: 80%;
+  margin: 5% 10%;
+  background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+}
+
+.application h1 {
+  text-transform: capitalize;
+  font-size: 39px;
+  padding: 5% 5%;
+  transition: 0.5s ease-out;
+}
+
+.application-content {
+  padding: 0 5% 5%;
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  justify-items: center;
+  text-align: left;
+  grid-template-columns: 100%;
+  grid-gap: 5%;
+}
+
+.application-content .images {
+  padding: 0 0 10%;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-rows: 100%;
+  grid-template-columns: repeat(4, 300px);
+}
+
+.application-content .images img {
+  max-width: 300px;
+}
+
+.application-content h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.application-content .face.face2 .content {
+  background: #333;
+  padding: 30px 0;
+}
+
+.application-content .images .card .face.face1 {
+  z-index: 1;
+  transform: translateY(100px);
+  transition: 0.5s ease-out;
+}
+
+.application-content .images .card:hover .face.face1 {
+  transform: translateY(0);
+}
+
+.application-content .images .card .face.face2 {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8);
+  transform: translateY(-50px);
+}
+
+.application-content .images .card:hover .face.face2 {
+  transform: translateY(0);
 }
 
 .contact {
