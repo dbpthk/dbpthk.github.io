@@ -114,26 +114,10 @@ nav {
   transition: all 0.3s ease;
 }
 
-.home-page {
-  background-image: url(./background.jpg);
-  background-position-x: center;
-  background-position-y: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
+.home-page,
 .about-page,
+.projects-page,
 .application-page {
-  background-image: url(./background.jpg);
-  background-position-x: center;
-  background-position-y: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.projects-page {
   background-image: url(./background.jpg);
   background-position-x: center;
   background-position-y: center;
@@ -160,88 +144,51 @@ nav {
 
 .home {
   background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  margin-top: 3%;
+  transition: 0.5s ease-in;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: -webkit-max-content auto -webkit-max-content;
-  grid-template-rows: max-content auto max-content;
-  position: relative;
-  align-items: center;
-  justify-items: center;
-  max-height: 100%;
-  margin-left: 5%;
+  grid-template-rows: -webkit-max-content auto;
+  grid-template-rows: max-content auto;
+  grid-gap: 10%;
+  max-width: 80%;
+  padding: 5%;
+  margin-left: 10%;
 }
 
 .home h1 {
-  padding-top: 60px;
-  transition: all 1s ease-in-out;
   color: #333333;
   font-size: 39px;
   text-align: left;
 }
 
 .home .home-content {
-  margin: 10% 3% 10%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: -webkit-max-content auto;
+  grid-template-rows: max-content auto;
+}
+
+.home-presentation {
+  display: grid;
+  grid-template-columns: auto auto;
   grid-gap: 10%;
 }
 
 .home-presentation .intro-box {
   position: relative;
-  height: 520px;
   width: 390px;
   display: grid;
-  justify-items: left;
-  grid-template-columns: 100%;
-  grid-template-rows: 15% 50% auto;
-  grid-gap: 0;
-  background: #f6f7f8;
+  grid-template-rows: 20% auto;
 }
 
 .home-presentation .intro-box h5 {
-  font-size: 24px;
-  font-weight: 300;
-}
-
-.home-presentation .intro-box .myintro,
-.myname {
-  text-align: left;
-  padding: 15% 8% 0;
-}
-
-.home-presentation .intro-box::before,
-.home-presentation .intro-box::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background: linear-gradient(45deg, #000000, #696969, #808080, #a9a9a9, #c0c0c0, #000000, #696969, #808080, #a9a9a9, #c0c0c0);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: animate 20s linear infinite;
-}
-
-.home-presentation .intro-box::after {
-  filter: blur(5px);
-}
-
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 300% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
+  font-size: 29px;
+  font-weight: 500;
 }
 
 .home-presentation .myname h5 {
-  background: linear-gradient(45deg, #181818, #000000, #6d6c72, #2d2d2e, #010008, #2e2d2d, #696969, #3a3a3b, #2196f3);
+  background: linear-gradient(45deg, #000000, #2d2d2e, #010008, #2196f3);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   max-width: -webkit-max-content;
@@ -258,12 +205,13 @@ nav {
   }
 }
 
-.home-presentation .getbutton {
-  text-align: center;
+.home-content .getbutton {
+  text-align: right;
   width: 100%;
+  padding-top: -50px;
 }
 
-.home-presentation .getbutton a {
+.home-content .getbutton a {
   display: inline-block;
   position: relative;
   color: #473528;
@@ -275,19 +223,19 @@ nav {
   transition: 0.2s;
 }
 
-.home-presentation .getbutton a:hover {
+.home-content .getbutton a:hover {
   color: #ffffff;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3, 0 0 30px #2196f3, 0 0 60px #2196f3;
   transition-delay: 1s;
 }
 
-.home-presentation .getbutton a span {
+.home-content .getbutton a span {
   position: absolute;
   display: block;
 }
 
-.home-presentation .getbutton a span:nth-child(1) {
+.home-content .getbutton a span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -295,12 +243,12 @@ nav {
   background: linear-gradient(90deg, transparent, #2196f3);
 }
 
-.home-presentation .getbutton a:hover span:nth-child(1) {
+.home-content .getbutton a:hover span:nth-child(1) {
   left: 100%;
   transition: 1s;
 }
 
-.home-presentation .getbutton a span:nth-child(3) {
+.home-content .getbutton a span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -308,13 +256,13 @@ nav {
   background: linear-gradient(270deg, transparent, #2196f3);
 }
 
-.home-presentation .getbutton a:hover span:nth-child(3) {
+.home-content .getbutton a:hover span:nth-child(3) {
   right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
 }
 
-.home-presentation .getbutton a span:nth-child(2) {
+.home-content .getbutton a span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -322,13 +270,13 @@ nav {
   background: linear-gradient(180deg, transparent, #2196f3);
 }
 
-.home-presentation .getbutton a:hover span:nth-child(2) {
+.home-content .getbutton a:hover span:nth-child(2) {
   top: 100%;
   transition: 1s;
   transition-delay: 0.25s;
 }
 
-.home-presentation .getbutton a span:nth-child(4) {
+.home-content .getbutton a span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -336,7 +284,7 @@ nav {
   background: linear-gradient(360deg, transparent, #2196f3);
 }
 
-.home-presentation .getbutton a:hover span:nth-child(4) {
+.home-content .getbutton a:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
@@ -347,24 +295,16 @@ nav {
     background: url("./laptop-images/image1.jpg");
     background-size: cover;
   }
-  16.67% {
+  25% {
     background: url("./laptop-images/image2.jpg");
     background-size: cover;
   }
-  33.34% {
+  50% {
     background: url("./laptop-images/image3.jpg");
     background-size: cover;
   }
-  50.01% {
+  75% {
     background: url("./laptop-images/image4.jpg");
-    background-size: cover;
-  }
-  66.68% {
-    background: url("./laptop-images/image5.jpg");
-    background-size: cover;
-  }
-  83.35% {
-    background: url("./laptop-images/image6.jpg");
     background-size: cover;
   }
   100% {
@@ -375,8 +315,8 @@ nav {
 
 .home-content .shuffle-images {
   position: relative;
-  height: 520px;
-  width: 390px;
+  height: 512px;
+  width: 768px;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -401,9 +341,21 @@ nav {
   filter: blur(5px);
 }
 
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .home-content .crossfade-images {
-  max-width: 300px;
-  animation: fader 12s linear infinite;
+  max-width: 768px;
+  animation: fader 8s linear infinite;
 }
 
 .about {
@@ -597,7 +549,7 @@ nav {
 }
 
 .projects {
-  background-image: linear-gradient(to top, #a5a4a1b6 0%, #838280b0 1%, #696968da 31%, #2e2e2db4 75%, #e9e9e7ee 100%);
+  background-image: linear-gradient(to bottom, #696968da 31%, #2e2e2db4 75%, #e9e9e7ee 100%);
   max-width: 80%;
   margin-left: 10%;
 }
@@ -904,6 +856,7 @@ textarea:focus {
   }
 }
 
+.home-page .footer,
 .about-page .footer,
 .projects-page .footer {
   width: 80%;
