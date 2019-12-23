@@ -205,16 +205,64 @@ nav {
   }
 }
 
+.home-content .crossfade-images {
+  height: 512px;
+  width: 768px;
+}
+
+.crossfade-images ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.crossfade-images li {
+  position: absolute;
+}
+
+.crossfade-images img {
+  box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.3);
+}
+
+.crossfade-images li:nth-child(4) {
+  animation: xfade 12s 0s infinite;
+}
+
+.crossfade-images li:nth-child(3) {
+  animation: xfade 12s 3s infinite;
+}
+
+.crossfade-images li:nth-child(2) {
+  animation: xfade 12s 6s infinite;
+}
+
+.crossfade-images li:nth-child(1) {
+  animation: xfade 12s 9s infinite;
+}
+
+@keyframes xfade {
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+}
+
 .home-content .getbutton {
   text-align: right;
   width: 100%;
-  padding-top: -50px;
 }
 
 .home-content .getbutton a {
   display: inline-block;
   position: relative;
   color: #473528;
+  font-weight: 500;
   text-decoration: none;
   overflow: hidden;
   font-size: 24px;
@@ -288,74 +336,6 @@ nav {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
-}
-
-@keyframes fader {
-  0% {
-    background: url("./laptop-images/image1.jpg");
-    background-size: cover;
-  }
-  25% {
-    background: url("./laptop-images/image2.jpg");
-    background-size: cover;
-  }
-  50% {
-    background: url("./laptop-images/image3.jpg");
-    background-size: cover;
-  }
-  75% {
-    background: url("./laptop-images/image4.jpg");
-    background-size: cover;
-  }
-  100% {
-    background: url("./laptop-images/image1.jpg");
-    background-size: cover;
-  }
-}
-
-.home-content .shuffle-images {
-  position: relative;
-  height: 512px;
-  width: 768px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  background: #f6f7f8;
-}
-
-.home-content .shuffle-images:before,
-.home-content .shuffle-images::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: animate 20s linear infinite;
-}
-
-.home-content .shuffle-images::after {
-  filter: blur(5px);
-}
-
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 300% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.home-content .crossfade-images {
-  max-width: 768px;
-  animation: fader 8s linear infinite;
 }
 
 .about {
