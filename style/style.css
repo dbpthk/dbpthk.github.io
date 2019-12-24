@@ -177,7 +177,6 @@ nav {
 
 .home-presentation .intro-box {
   position: relative;
-  width: 390px;
   display: grid;
   grid-template-rows: 20% auto;
 }
@@ -222,6 +221,7 @@ nav {
 }
 
 .crossfade-images img {
+  width: 768px;
   box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.3);
 }
 
@@ -255,7 +255,7 @@ nav {
 
 .home-content .getbutton {
   text-align: right;
-  width: 100%;
+  max-width: 100%;
 }
 
 .home-content .getbutton a {
@@ -878,6 +878,36 @@ textarea:focus {
   margin-top: -1px;
   font-size: 12px;
   text-align: center;
+}
+
+@media (max-width: 1600px) {
+  .nav-links {
+    z-index: 1;
+    width: 60%;
+  }
+  .home {
+    max-width: 90%;
+    margin-left: 5%;
+    overflow: hidden;
+  }
+  .home-presentation {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: -webkit-max-content auto;
+    grid-template-columns: max-content auto;
+  }
+  .home-presentation .intro-box p {
+    font-size: 16px;
+  }
+  .home-presentation .intro-box h5 {
+    font-size: 22px;
+  }
+  .crossfade-images {
+    max-width: 90%;
+  }
+  .crossfade-images ul img {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 1280px) {

@@ -205,7 +205,6 @@ nav {
 //introduction box along with background gradients
 .home-presentation .intro-box {
   position: relative;
-  width: 390px;
   display: grid;
   grid-template-rows: 20% auto;
   h5 {
@@ -249,6 +248,7 @@ nav {
   position: absolute;
 }
 .crossfade-images img {
+  width: 768px;
   box-shadow: 0 0 5px 0 hsla(0, 0%, 30%, 0.3);
 }
 .crossfade-images li:nth-child(4) {
@@ -278,7 +278,7 @@ nav {
 //get in touch button
 .home-content .getbutton {
   text-align: right;
-  width: 100%;
+  max-width: 100%;
 }
 
 .home-content .getbutton a {
@@ -1000,6 +1000,41 @@ textarea:focus {
 }
 
 //media screens
+
+@media (max-width: 1600px) {
+  .nav-links {
+    z-index: 1;
+    width: 60%;
+  }
+
+  .home {
+    max-width: 90%;
+    margin-left: 5%;
+    overflow: hidden;
+  }
+  .home-presentation {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: max-content auto;
+  }
+
+  .home-presentation .intro-box {
+    p {
+      font-size: 16px;
+    }
+    h5 {
+      font-size: 22px;
+    }
+  }
+  //image container
+  .crossfade-images {
+    max-width: 90%;
+  }
+  .crossfade-images ul img {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .nav-links {
     z-index: 1;
