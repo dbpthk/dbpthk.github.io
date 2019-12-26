@@ -192,13 +192,14 @@ nav {
 .home .home-content {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: max-content auto;
+  grid-template-rows: auto auto;
 }
 
 //for introduction and images
 .home-presentation {
   display: grid;
   grid-template-columns: auto auto;
+  grid-template-rows: 100%;
   grid-gap: 10%;
 }
 
@@ -394,7 +395,8 @@ nav {
 //about top content
 .about .grid-container {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: auto auto;
+  grid-gap: 5%;
 }
 
 //image container
@@ -601,7 +603,7 @@ nav {
 .projects-container {
   display: grid;
   grid-template-rows: 100%;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: auto auto auto;
   grid-gap: 5%;
   justify-items: center;
   justify-content: center;
@@ -622,7 +624,7 @@ nav {
 .projects-container .card .face.face1 {
   background: #333;
   z-index: 1;
-  transform: translateY(250px);
+  transform: translateY(200px);
 }
 
 //hover on card (top part)
@@ -659,7 +661,7 @@ nav {
   background: #fff;
   padding: 20px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8);
-  transform: translateY(-300px);
+  transform: translateY(-200px);
 }
 
 //second card hover (bottom part)
@@ -687,8 +689,8 @@ nav {
 //android application screenshots page
 
 .application {
-  width: 80%;
-  margin: 5% 10%;
+  max-width: 90%;
+  margin: 5%;
   background-image: linear-gradient(
     to top,
     #d5d4d0 0%,
@@ -722,7 +724,7 @@ nav {
   display: grid;
   grid-gap: 50px;
   grid-template-rows: 100%;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(4, auto);
 }
 .application-content .images img {
   max-width: 300px;
@@ -766,12 +768,13 @@ nav {
 
 .contact {
   display: grid;
-  grid-template-columns: 10% 70%;
+  grid-template-columns: auto auto;
   grid-template-rows: 100%;
-  margin-top: 15%;
+  grid-gap: 0;
+  max-width: 80%;
+  margin-top: 13%;
+  margin-left: 10%;
   transition: all 2s ease-in-out;
-  justify-items: center;
-  justify-content: center;
   color: #333333;
 }
 
@@ -785,10 +788,11 @@ nav {
     #efeeecb4 75%,
     #e9e9e7ee 100%
   );
+  background-size: max-content;
+  margin-left: -15%;
   justify-items: center;
   justify-content: center;
-  margin-left: -15%;
-  width: 80%;
+  padding: 0 50px;
   display: grid;
 }
 
@@ -811,6 +815,7 @@ nav {
 
 //contact-form
 .contact-form {
+  width: 100%;
   margin-top: 50px;
   transition: all 4s ease-in-out;
 }
@@ -846,7 +851,7 @@ textarea:focus {
   border: none;
   border-bottom: 1px solid gray;
   cursor: pointer;
-  width: 700px;
+  width: 100%;
   height: 50px;
   transition: all 0.5s ease-in-out;
 }
@@ -941,7 +946,8 @@ textarea:focus {
 
 .home-page .footer,
 .about-page .footer,
-.projects-page .footer {
+.projects-page .footer,
+.contact-page .footer {
   width: 80%;
   background-image: linear-gradient(
     to top,
@@ -952,21 +958,6 @@ textarea:focus {
     #e9e9e7ee 100%
   );
   margin-left: 10%;
-}
-
-//footer only for contact page
-.contact-page .footer {
-  width: 56%;
-  margin-left: 49%;
-  transform: translateX(-49%);
-  background-image: linear-gradient(
-    to top,
-    #d5d4d0 0%,
-    #d5d4d0b0 1%,
-    #eeeeecda 31%,
-    #efeeecb4 75%,
-    #e9e9e7d7 100%
-  );
 }
 
 //footer
@@ -1007,7 +998,9 @@ textarea:focus {
     width: 60%;
   }
 
-  .home {
+  .home,
+  .about,
+  .projects {
     max-width: 90%;
     margin-left: 5%;
     overflow: hidden;
@@ -1033,12 +1026,93 @@ textarea:focus {
   .crossfade-images ul img {
     max-width: 100%;
   }
+
+  //projects
+  .projects {
+    p {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .projects-container {
+    margin-left: 5%;
+    grid-gap: 0;
+  }
+
+  //each card width
+  .projects-container .card .face {
+    width: 80%;
+    transition: 0.5s ease-in-out;
+  }
+
+  //image size
+  .projects-container .card img {
+    max-width: 100%;
+  }
+
+  //application page
+
+  .application {
+    max-width: 96%;
+  }
+
+  .application-content .images img {
+    max-width: 250px;
+  }
+
+  //footer
+  .home-page .footer,
+  .about-page .footer,
+  .projects-page .footer {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 
 @media screen and (max-width: 1280px) {
   .nav-links {
     z-index: 1;
-    width: 55%;
+    width: 70%;
+  }
+
+  //homepage
+  .home {
+    transition: 0.5s ease-in;
+    padding-bottom: 15%;
+    h1 {
+      font-size: 29px;
+    }
+  }
+
+  .home-content {
+    display: grid;
+    grid-gap: 10%;
+  }
+  .home-presentation {
+    display: grid;
+    transition: 0.5s ease-in;
+    grid-template-rows: max-content auto;
+    grid-template-columns: 100%;
+    grid-gap: 5%;
+  }
+
+  //contact page
+  .contact {
+    margin-top: 20%;
+    max-width: 90%;
+    margin-left: 5%;
+  }
+
+  .contact-presentation {
+    margin: 0;
+  }
+  //contact footer increse by 10%
+  .contact-page .footer {
+    width: 90%;
+    margin-left: 5%;
   }
 }
 
