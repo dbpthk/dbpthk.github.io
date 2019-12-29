@@ -113,7 +113,7 @@ const navSlide = () => {
         link.style.animation = "";
       } else {
         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-          0.5}s`;
+          0.3}s`;
       }
     });
 
@@ -122,6 +122,7 @@ const navSlide = () => {
   }
 
   burger.addEventListener("click", toggleNativation);
+  //    document.getElementById("main-page").style.marginTop = "289px";
 
   // reloading whole page ob phone
   Array.from(navLinks).forEach(link =>
@@ -169,20 +170,19 @@ $(document).ready(function() {
     }
 
     if (email.length > 5 && email.includes("@") && email.includes(".")) {
-      console.log("Email is valid");
     } else {
       event.preventDefault();
-      statusE.append("<div>Email is not valid</div>");
+      statusE.append("<div>&#9888 Email is not valid</div>");
     }
 
     if (subject.length <= 2) {
       event.preventDefault();
-      statusS.append("<div>Subject is not valid</div>");
+      statusS.append("<div>&#9888 Subject is not valid</div>");
     }
     if (message.length <= 10) {
       event.preventDefault();
       statusM.append(
-        "<div>Message needs to be at least 10 characters long</div>"
+        "<div>&#9888 Message needs to be at least 10 characters long</div>"
       );
     }
   });

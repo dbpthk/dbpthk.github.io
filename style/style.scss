@@ -785,7 +785,6 @@ main {
   grid-gap: 0;
   max-width: 80%;
   margin: 10% 0 10% 10%;
-  transition: all 2s ease-in-out;
   color: #333333;
 }
 
@@ -809,7 +808,6 @@ main {
 
 .contact .contact-title {
   margin-top: 40px;
-  transition: all 4s ease-in-out;
 }
 
 //Get in touch header and a paragraph
@@ -821,17 +819,23 @@ main {
 }
 
 .contact-title p {
-  text-align: center;
+  text-align: left;
 }
 
 //contact-form
 .contact-form {
   width: 100%;
   margin-top: 50px;
-  transition: all 4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 //form area
+//placeholder
+form input::placeholder,
+textarea::placeholder {
+  color: #221f1fa1;
+}
+
 form input[type="text"],
 select,
 textarea {
@@ -1333,10 +1337,54 @@ textarea:focus {
   //changing grid style to row based
   .contact {
     display: grid;
-    transition: 0.5s ease;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto;
-    grid-gap: 0;
+    grid-template-columns: 50px auto;
+    grid-template-rows: 100%;
+    grid-gap: 2%;
+    margin: 8% 0 20% 5%;
+  }
+  //reducing padding from 50px to 10px
+  .contact-presentation {
+    padding: 0 10px;
+  }
+
+  //social media container
+  .social-media {
+    display: grid; //to put it to right
+    justify-content: left;
+    justify-items: left;
+    width: 100%;
+    margin-top: 200px; //taking 100px margin off
+  }
+
+  //reducing social media icons size
+  .social-media .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+  }
+
+  .btn i {
+    line-height: 40px;
+    font-size: 20px;
+  }
+
+  //Get in touch header and a paragraph size
+  .contact-title h1 {
+    font-size: 24px;
+  }
+
+  .contact-title p {
+    font-size: 14px;
+  }
+
+  //reducing submit button size
+  .contact-form button {
+    font-size: 20px;
+    height: 40px;
+  }
+
+  .footer .bottom-bar p {
+    font-size: 10px;
   }
 }
 
