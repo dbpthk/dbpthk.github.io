@@ -27,13 +27,13 @@ body {
 nav {
   position: fixed;
   min-width: 100%;
-  z-index: 1;
+  z-index: 2;
   text-transform: capitalize;
   display: flex;
   justify-content: space-around;
   padding: 10px;
   align-items: center;
-  min-height: 112px;
+  height: 112px;
   background: #181818;
 }
 
@@ -111,7 +111,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: linear-gradient(to right, #413127 0%, #7c755e 100%);
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -587,9 +587,7 @@ main {
 }
 
 .projects-container .card .face.face2 h3 {
-  padding: 10px;
-  text-align: center;
-  font-weight: 900;
+  display: none;
 }
 
 .projects-container .content p {
@@ -1034,6 +1032,58 @@ textarea:focus {
     max-width: 90%;
     max-height: 90%;
   }
+  .projects {
+    padding-bottom: 200px;
+  }
+  .projects-container {
+    display: grid;
+    transition: 0.5s ease-out;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    grid-gap: 5%;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    margin: 0;
+  }
+  .projects-container .card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+  }
+  .projects-container .card img {
+    max-width: 350px;
+  }
+  .projects-container .card .face.face1 {
+    max-width: 350px;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+    background: none;
+    transform: translateX(150px);
+  }
+  .projects-container .card:hover .face.face1 {
+    background: none;
+    transform: translateX(0);
+  }
+  .projects-container .card .face.face2 {
+    width: 300px;
+    height: 534.38px;
+  }
+  .projects-container .card .face.face1 h3 {
+    display: none;
+  }
+  .projects-container .card .face.face2 h3 {
+    display: inline-block;
+    padding: 10px 0;
+    text-align: left;
+    font-weight: 900;
+  }
+  .projects-container .card .face.face2 {
+    transform: translateX(-150px);
+  }
+  .projects-container .card:hover .face.face2 {
+    transform: translateX(0);
+  }
   .contact {
     margin-top: 10%;
   }
@@ -1050,15 +1100,21 @@ textarea:focus {
   body {
     overflow-x: hidden;
   }
+  nav {
+    height: 89px;
+  }
   .nav-links {
-    z-index: 1;
+    background: #181818;
+    z-index: 2;
     position: absolute;
     right: 0px;
-    height: 87.5vh;
-    width: 40%;
-    top: 8vh;
-    display: flex;
-    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    top: 89px;
+    bottom: 289px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     align-items: center;
     transform: translate(100%);
     transition: transform 0.5s ease-in;
@@ -1069,10 +1125,29 @@ textarea:focus {
   .burger {
     display: block;
   }
+  .nav-links li:hover {
+    background: none;
+  }
+  .nav-links li::after {
+    background: none;
+  }
+  .active a {
+    color: #fad89e;
+    transform: scale(1.2);
+    font-weight: 400;
+    border: none;
+  }
+  .contact {
+    display: grid;
+    transition: 0.5s ease;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-gap: 0;
+  }
 }
 
 .nav-active {
-  transform: translate(10%);
+  transform: translate(0%);
 }
 
 @keyframes navLinkFade {

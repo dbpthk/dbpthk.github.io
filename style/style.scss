@@ -27,13 +27,13 @@ body {
 nav {
   position: fixed;
   min-width: 100%;
-  z-index: 1;
+  z-index: 2;
   text-transform: capitalize;
   display: flex;
   justify-content: space-around;
   padding: 10px;
   align-items: center;
-  min-height: 112px;
+  height: 112px;
   background: #181818;
 }
 .logo span {
@@ -110,10 +110,15 @@ nav {
   cursor: pointer;
 }
 
+//for mobile site nav
 .burger div {
   width: 25px;
   height: 3px;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: linear-gradient(
+    to right,
+    #413127 0%,
+    rgb(124, 117, 94) 100%
+  );
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -655,10 +660,9 @@ main {
   text-align: center;
 }
 
+//hiding h3 for info container (this is only for mobile site)
 .projects-container .card .face.face2 h3 {
-  padding: 10px;
-  text-align: center;
-  font-weight: 900;
+  display: none;
 }
 
 .projects-container .content p {
@@ -1157,7 +1161,6 @@ textarea:focus {
   }
 
   //about page
-
   .about .grid-container {
     display: grid;
     grid-template-rows: auto max-content;
@@ -1183,10 +1186,78 @@ textarea:focus {
   }
 
   //skills container
-
   .myskills-container .card {
     max-width: 90%;
     max-height: 90%;
+  }
+
+  //projects page
+  .projects {
+    padding-bottom: 200px;
+  }
+
+  .projects-container {
+    display: grid;
+    transition: 0.5s ease-out;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    grid-gap: 5%;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    margin: 0; //taking margin off
+  }
+  //for columns display
+  .projects-container .card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+  }
+
+  //image size
+  .projects-container .card img {
+    max-width: 350px;
+  }
+
+  .projects-container .card .face.face1 {
+    max-width: 350px;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+    background: none; //taking gray background off
+    transform: translateX(150px);
+  }
+
+  //hover on card (top part)
+  .projects-container .card:hover .face.face1 {
+    background: none;
+    transform: translateX(0);
+  }
+
+  //for info width
+  .projects-container .card .face.face2 {
+    width: 300px;
+    height: 534.38px; //equal to the image height
+  }
+
+  //hiding h3 for image container(this is only for desktop site)
+  .projects-container .card .face.face1 h3 {
+    display: none;
+  }
+
+  .projects-container .card .face.face2 h3 {
+    display: inline-block;
+    padding: 10px 0;
+    text-align: left;
+    font-weight: 900;
+  }
+
+  .projects-container .card .face.face2 {
+    transform: translateX(-150px);
+  }
+
+  //second card hover (bottom part)
+  .projects-container .card:hover .face.face2 {
+    transform: translateX(0);
   }
 
   //contact page
@@ -1196,6 +1267,7 @@ textarea:focus {
   //to put footer to bottom in contact page
 }
 
+//only for crossfade images on home page
 @media screen and (max-width: 850px) {
   //image container
   .home-content .crossfade-images {
@@ -1203,20 +1275,30 @@ textarea:focus {
     max-height: 453px;
   }
 }
+
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
 
+  //navigation
+  nav {
+    height: 89px;
+  }
   .nav-links {
-    z-index: 1;
+    background: #181818;
+    z-index: 2;
     position: absolute;
     right: 0px;
-    height: 87.5vh;
-    width: 40%;
-    top: 8vh;
-    display: flex;
-    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    top: 89px;
+    bottom: 289px;
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     align-items: center;
     transform: translate(100%);
     transition: transform 0.5s ease-in;
@@ -1227,10 +1309,39 @@ textarea:focus {
   .burger {
     display: block;
   }
+
+  //taking hover style off
+  .nav-links li:hover {
+    background: none;
+  }
+  .nav-links li::after {
+    background: none;
+  }
+
+  //for active nav bar on mobile sites
+  .active {
+    a {
+      color: #fad89e;
+      transform: scale(1.2);
+      font-weight: 400;
+      border: none;
+    }
+  }
+
+  //contact page
+
+  //changing grid style to row based
+  .contact {
+    display: grid;
+    transition: 0.5s ease;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-gap: 0;
+  }
 }
 
 .nav-active {
-  transform: translate(10%);
+  transform: translate(0%);
 }
 
 @keyframes navLinkFade {

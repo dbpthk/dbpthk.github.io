@@ -123,7 +123,7 @@ const navSlide = () => {
 
   burger.addEventListener("click", toggleNativation);
 
-  //this one (reloading whole page ob phone)
+  // reloading whole page ob phone
   Array.from(navLinks).forEach(link =>
     link.addEventListener("click", toggleNativation)
   );
