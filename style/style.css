@@ -25,13 +25,15 @@ body {
 }
 
 nav {
+  position: fixed;
+  min-width: 100%;
   z-index: 1;
   text-transform: capitalize;
   display: flex;
   justify-content: space-around;
   padding: 10px;
   align-items: center;
-  min-height: 10vh;
+  min-height: 112px;
   background: #181818;
 }
 
@@ -114,11 +116,15 @@ nav {
   transition: all 0.3s ease;
 }
 
+main {
+  margin-top: 112px;
+}
+
 .home-page,
 .about-page,
 .projects-page,
 .application-page {
-  background-image: url(./background.jpg);
+  background-image: url(../images/background.jpg);
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -127,7 +133,7 @@ nav {
 }
 
 .contact-page {
-  background-image: linear-gradient(60deg, rgba(15, 12, 202, 0.192), rgba(22, 22, 27, 0.13), rgba(143, 142, 223, 0.068)), url("./cover.jpg");
+  background-image: linear-gradient(60deg, rgba(15, 12, 202, 0.192), rgba(22, 22, 27, 0.13), rgba(143, 142, 223, 0.068), rgba(15, 12, 202, 0.192)), url("../images/3333.jpg");
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -359,6 +365,7 @@ nav {
 .about .grid-container {
   display: grid;
   grid-template-columns: auto auto;
+  grid-template-rows: 100%;
   grid-gap: 5%;
 }
 
@@ -384,8 +391,7 @@ nav {
 .about .skills-container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto -webkit-max-content;
-  grid-template-rows: auto max-content;
+  grid-template-rows: auto;
   grid-gap: 10%;
 }
 
@@ -689,8 +695,7 @@ nav {
   grid-template-rows: 100%;
   grid-gap: 0;
   max-width: 80%;
-  margin-top: 13%;
-  margin-left: 10%;
+  margin: 10% 0 10% 10%;
   transition: all 2s ease-in-out;
   color: #333333;
 }
@@ -853,7 +858,7 @@ textarea:focus {
   bottom: 0;
   text-align: center;
   padding: 10px;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .top-bar a .fa {
@@ -888,7 +893,6 @@ textarea:focus {
   .projects {
     max-width: 90%;
     margin-left: 5%;
-    overflow: hidden;
   }
   .home-presentation {
     display: grid;
@@ -963,8 +967,13 @@ textarea:focus {
     grid-template-columns: 100%;
     grid-gap: 5%;
   }
+  .crossfade-images {
+    max-width: 100%;
+  }
+  .crossfade-images ul img {
+    max-width: 100%;
+  }
   .contact {
-    margin-top: 20%;
     max-width: 90%;
     margin-left: 5%;
   }
@@ -978,9 +987,62 @@ textarea:focus {
 }
 
 @media screen and (max-width: 1024px) {
+  nav {
+    padding: 5px;
+  }
+  .nav-links a {
+    padding: 0 1em;
+  }
   .nav-links {
     z-index: 1;
-    width: 50%;
+    width: 70%;
+  }
+  .home {
+    grid-gap: 5%;
+  }
+  .home h1 {
+    font-size: 24px;
+  }
+  .home {
+    padding-bottom: 10%;
+  }
+  .home-presentation,
+  .home-content {
+    grid-gap: 2%;
+  }
+  .about .grid-container {
+    display: grid;
+    grid-template-rows: auto -webkit-max-content;
+    grid-template-rows: auto max-content;
+    transition: 0.5s ease-in;
+    grid-template-columns: 100%;
+    justify-items: center;
+    grid-gap: 5%;
+    padding-bottom: 5%;
+  }
+  .about .circular-square {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  .about .about-info {
+    padding-top: 0;
+  }
+  .myskills-container .card {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  .contact {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .home-content .crossfade-images {
+    transition: 0.5s ease;
+    max-height: 453px;
   }
 }
 
