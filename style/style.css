@@ -1299,13 +1299,14 @@ textarea:focus {
   .projects-container .card:hover .face.face1 {
     background: none;
     transform: translateX(0);
+    transition: 1s ease-out;
     opacity: 0;
   }
   .projects-container .card .face.face2 {
     transform: translateX(-110px);
   }
   .projects-container .card:hover .face.face2 {
-    transform: translateX(-100px);
+    transform: translateX(-110px);
   }
 }
 
