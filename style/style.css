@@ -1299,7 +1299,7 @@ textarea:focus {
   .projects-container .card:hover .face.face1 {
     background: none;
     transform: translateX(0);
-    transition: 1s ease-out;
+    transition: 0.5s ease-out;
     opacity: 0;
   }
   .projects-container .card .face.face2 {
