@@ -603,6 +603,9 @@ main {
   max-width: 80%;
   margin-left: 10%;
 }
+.projects h1 {
+  display: none;
+}
 
 //grid projects in center
 .projects-container {
@@ -706,9 +709,14 @@ main {
 }
 .application h1 {
   text-transform: capitalize;
+  font-weight: 500;
   font-size: 39px;
   padding: 5% 5%;
   transition: 0.5s ease-out;
+}
+.application h2 {
+  font-weight: 500;
+  padding-top: 10px;
 }
 
 .application-content {
@@ -719,7 +727,7 @@ main {
   justify-items: center;
   text-align: left;
   grid-template-columns: 100%;
-  grid-gap: 5%;
+  grid-gap: 2%;
 }
 
 //for images grid
@@ -1063,6 +1071,7 @@ textarea:focus {
 
   .application {
     max-width: 96%;
+    margin-left: 2.5%;
   }
 
   .application-content .images img {
@@ -1075,6 +1084,26 @@ textarea:focus {
   .projects-page .footer {
     width: 90%;
     margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  //appliation page
+
+  .application-content {
+    grid-gap: 2%;
+  }
+  //image containers
+  .application-content .images {
+    padding: 0 0 10%;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .application-content .images img {
+    max-width: 300px; //return to original size
   }
 }
 
@@ -1395,8 +1424,20 @@ textarea:focus {
     padding-bottom: 100px;
   }
 
+  //project heading only for mobile sites
+  .projects h1 {
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+    color: #eff0c0;
+    font-weight: 500;
+  }
+
   .projects p {
     margin-top: 0px;
+  }
+  .projects-container {
+    padding-top: 50px; //taking 50px padding off
   }
 
   //image size
@@ -1505,6 +1546,39 @@ textarea:focus {
     width: 95%;
     margin-left: 2.5%;
   }
+
+  //application page
+
+  .application h1 {
+    font-size: 29px;
+  }
+
+  //for images grid
+  .application-content .images {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 100%;
+  }
+
+  //area of icon name text
+  .application-content .images .card .face.face1 {
+    transform: translateY(0px);
+  }
+
+  //hover on card (top part)
+  .application-content .images .card:hover .face.face1 {
+    transform: translateY(0);
+  }
+
+  .application-content .images .card .face.face2 {
+    transform: translateY(0px);
+  }
+
+  //second card hover (bottom part)
+  .application-content .images .card:hover .face.face2 {
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -1530,6 +1604,17 @@ textarea:focus {
     grid-template-columns: 100%;
     grid-gap: 20px;
   }
+
+  //application page
+
+  .application {
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1550,7 +1635,9 @@ textarea:focus {
   //hover on card (top part)
   .projects-container .card:hover .face.face1 {
     background: none;
-    transform: translateX(0);
+    transform: translateX(
+      -110px
+    ); //taking whole container away to enable click on open button
     transition: 0.5s ease-out;
     opacity: 0;
   }
@@ -1585,6 +1672,27 @@ textarea:focus {
   .about .circular-square {
     height: 200px;
     width: 200px;
+  }
+
+  //application
+  .application {
+    h1,
+    h3 {
+      font-size: 18px;
+    }
+    p,
+    h2 {
+      font-size: 14px;
+    }
+
+    .application-content .images img {
+      max-width: 250px;
+    }
+  }
+
+  //name inside each images
+  .application-content .face.face2 .content {
+    padding: 15px 0;
   }
 }
 

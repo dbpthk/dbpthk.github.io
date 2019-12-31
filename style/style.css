@@ -534,6 +534,10 @@ main {
   margin-left: 10%;
 }
 
+.projects h1 {
+  display: none;
+}
+
 .projects-container {
   display: grid;
   grid-template-rows: 100%;
@@ -622,9 +626,15 @@ main {
 
 .application h1 {
   text-transform: capitalize;
+  font-weight: 500;
   font-size: 39px;
   padding: 5% 5%;
   transition: 0.5s ease-out;
+}
+
+.application h2 {
+  font-weight: 500;
+  padding-top: 10px;
 }
 
 .application-content {
@@ -635,7 +645,7 @@ main {
   justify-items: center;
   text-align: left;
   grid-template-columns: 100%;
-  grid-gap: 5%;
+  grid-gap: 2%;
 }
 
 .application-content .images {
@@ -925,6 +935,7 @@ textarea:focus {
   }
   .application {
     max-width: 96%;
+    margin-left: 2.5%;
   }
   .application-content .images img {
     max-width: 250px;
@@ -934,6 +945,22 @@ textarea:focus {
   .projects-page .footer {
     width: 90%;
     margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .application-content {
+    grid-gap: 2%;
+  }
+  .application-content .images {
+    padding: 0 0 10%;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+  }
+  .application-content .images img {
+    max-width: 300px;
   }
 }
 
@@ -1185,8 +1212,18 @@ textarea:focus {
   .projects {
     padding-bottom: 100px;
   }
+  .projects h1 {
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+    color: #eff0c0;
+    font-weight: 500;
+  }
   .projects p {
     margin-top: 0px;
+  }
+  .projects-container {
+    padding-top: 50px;
   }
   .projects-container .card img {
     max-width: 220px;
@@ -1265,6 +1302,27 @@ textarea:focus {
     width: 95%;
     margin-left: 2.5%;
   }
+  .application h1 {
+    font-size: 29px;
+  }
+  .application-content .images {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 100%;
+  }
+  .application-content .images .card .face.face1 {
+    transform: translateY(0px);
+  }
+  .application-content .images .card:hover .face.face1 {
+    transform: translateY(0);
+  }
+  .application-content .images .card .face.face2 {
+    transform: translateY(0px);
+  }
+  .application-content .images .card:hover .face.face2 {
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -1285,6 +1343,12 @@ textarea:focus {
     grid-template-columns: 100%;
     grid-gap: 20px;
   }
+  .application h1 {
+    font-size: 22px;
+  }
+  .application p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1298,7 +1362,7 @@ textarea:focus {
   }
   .projects-container .card:hover .face.face1 {
     background: none;
-    transform: translateX(0);
+    transform: translateX(-110px);
     transition: 0.5s ease-out;
     opacity: 0;
   }
@@ -1324,6 +1388,20 @@ textarea:focus {
   .about .circular-square {
     height: 200px;
     width: 200px;
+  }
+  .application h1,
+  .application h3 {
+    font-size: 18px;
+  }
+  .application p,
+  .application h2 {
+    font-size: 14px;
+  }
+  .application .application-content .images img {
+    max-width: 250px;
+  }
+  .application-content .face.face2 .content {
+    padding: 15px 0;
   }
 }
 
