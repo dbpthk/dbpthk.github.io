@@ -1385,7 +1385,23 @@ textarea:focus {
   //image container
   .home-content .crossfade-images {
     transition: 0.5s ease;
-    max-height: 410px;
+    max-height: 428px;
+  }
+  .home-content .getbutton a {
+    border: 1px solid #2196f3;
+    box-shadow: 0 5px 5px #0191ff;
+  }
+
+  //taking hover anmation off
+  .home-content .getbutton a:hover {
+    color: #473528;
+    background: none;
+    box-shadow: 0 5px 5px #0191ff;
+    transition-delay: none;
+  }
+
+  .home-content .getbutton a span {
+    display: none;
   }
 
   //about page
@@ -1581,6 +1597,15 @@ textarea:focus {
   }
 }
 
+@media screen and (max-width: 680px) {
+  //home
+  //image container
+  .home-content .crossfade-images {
+    transition: 0.5s ease;
+    max-height: 375px;
+  }
+}
+
 @media screen and (max-width: 620px) {
   //home
   //image container
@@ -1693,6 +1718,15 @@ textarea:focus {
   //name inside each images
   .application-content .face.face2 .content {
     padding: 15px 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  //home
+  //image container
+  .home-content .crossfade-images {
+    transition: 0.5s ease;
+    max-height: 199px;
   }
 }
 
