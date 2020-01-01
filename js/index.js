@@ -18,26 +18,20 @@ const navSlide = () => {
     nav.classList.toggle("nav-active");
 
     //Animate Links
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 +
-          0.5}s`;
-      }
-    });
+    // navLinks.forEach((link, index) => {
+    //   if (link.style.animation) {
+    //     link.style.animation = "";
+    //   } else {
+    //     link.style.animation = `navLinkFade 0.5s ease forwards ${index / 10 +
+    //       0.5}s`;
+    //   }
+    // });
 
     //Burger Animation
     burger.classList.toggle("toggle");
   }
 
   burger.addEventListener("click", toggleNativation);
-  //    document.getElementById("main-page").style.marginTop = "289px";
-
-  // reloading whole page on phone
-  // Array.from(navLinks).forEach(link =>
-  //   link.addEventListener("click", toggleNativation)
-  // );
 };
 
 const app = () => {
