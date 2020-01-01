@@ -22,8 +22,8 @@ const navSlide = () => {
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-          0.3}s`;
+        link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 +
+          0.5}s`;
       }
     });
 
@@ -34,10 +34,10 @@ const navSlide = () => {
   burger.addEventListener("click", toggleNativation);
   //    document.getElementById("main-page").style.marginTop = "289px";
 
-  // reloading whole page ob phone
-  Array.from(navLinks).forEach(link =>
-    link.addEventListener("click", toggleNativation)
-  );
+  // reloading whole page on phone
+  // Array.from(navLinks).forEach(link =>
+  //   link.addEventListener("click", toggleNativation)
+  // );
 };
 
 const app = () => {

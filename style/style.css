@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
   line-height: 1.5;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 18px;
   letter-spacing: 1px;
 }
@@ -701,7 +701,7 @@ main {
 }
 
 .contact-presentation {
-  background-image: linear-gradient(to top, #d5d4d0b6 0%, #d5d4d0b0 1%, #eeeeecda 31%, #efeeecb4 75%, #e9e9e7ee 100%);
+  background: #eeeeece3;
   background-size: max-content;
   margin-left: -15%;
   justify-items: center;
@@ -722,6 +722,7 @@ main {
 }
 
 .contact-title p {
+  font-weight: 400;
   text-align: left;
 }
 
@@ -733,7 +734,7 @@ main {
 
 form input::placeholder,
 textarea::placeholder {
-  color: #221f1fa1;
+  color: #221f1f93;
 }
 
 form input[type="text"],
@@ -747,6 +748,7 @@ textarea {
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
+  font-weight: 400;
 }
 
 form input[type="text"]:focus,
@@ -1140,15 +1142,14 @@ textarea:focus {
     background: #181818;
     z-index: 2;
     position: absolute;
-    right: 0px;
-    height: 200px;
+    height: 250px;
     width: 100%;
     top: 89px;
-    bottom: 289px;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
     align-items: center;
+    justify-items: center;
     transform: translate(100%);
     transition: transform 0.5s ease-in;
   }
@@ -1335,6 +1336,12 @@ textarea:focus {
   }
   .application-content .images .card:hover .face.face2 {
     transform: translateY(0);
+  }
+  .top-bar a .fa {
+    opacity: 1;
+  }
+  .top-bar a:hover .fa {
+    transform: none;
   }
 }
 
