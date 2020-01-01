@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.img-banner {
+  display: none;
+}
+
+.img-info {
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+h2 {
+  padding: 8% 5% 3%;
+  font-size: 20px;
+  color: #111;
+}
+
+.img-info p {
+  padding: 3% 5% 3%;
+  font-size: 14px;
+  color: #111;
+  text-align: left;
+}
+
+.img-dhruv {
+  width: 90%;
+  margin-left: 5%;
+}
+
+@media only screen and (min-width: 357px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .img-banner {
+    display: block;
+    width: 100%;
+  }
+
+  .img-info p {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .img-banner {
+    display: block;
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+
+  h2 {
+    padding: 3% 5% 3%;
+  }
+  .wrapper .img-dhruv {
+    max-width: 50%;
+    float: left;
+  }
+
+  .wrapper .img-info {
+    max-width: 45%;
+    float: right;
+  }
+
+  .img-info p {
+    padding: 0 5% 0;
+  }
+  h2 {
+    font-size: 40px;
+  }
+
+  .img-info p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .wrapper {
+    padding-bottom: 5%;
+  }
+  h2 {
+    font-size: 46px;
+    padding: 3% 5% 3%;
+  }
+
+  .img-info p {
+    padding: 0 5% 0;
+  }
+
+  .img-info p {
+    font-size: 29px;
+  }
+}
+
+@media only screen and (min-width: 3800px) {
+  .img-banner {
+    display: block;
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  h2 {
+    font-size: 66px;
+    padding: 3% 5% 3%;
+  }
+
+  .img-info p {
+    font-size: 46px;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+}
