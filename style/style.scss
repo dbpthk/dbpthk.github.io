@@ -80,12 +80,13 @@ nav {
 .nav-links li:hover {
   background: #252525;
 }
+//only for under line when hover
 .nav-links li::after {
   content: "";
   display: block;
-  // width: 0;
+  width: 0;
   margin: auto;
-  // opacity: 0;
+  opacity: 0;
   height: 2px;
   background: #c19f63;
   transition: width 0.2s;
