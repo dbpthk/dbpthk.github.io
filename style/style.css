@@ -1442,6 +1442,10 @@ textarea:focus {
   opacity: 1;
 }
 
+.application-content .images {
+  padding: 0 0 15%;
+}
+
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
