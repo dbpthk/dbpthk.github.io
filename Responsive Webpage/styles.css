@@ -2,9 +2,9 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: sans-serif, Helvetica;
   line-height: 2;
-  font-weight: 300;
+  font-weight: auto;
   letter-spacing: 2px;
   padding-bottom: 20px;
 }
@@ -21,6 +21,7 @@
 }
 
 h2 {
+  font-weight: 500;
   padding: 8% 5% 3%;
   font-size: 20px;
   color: #111;
@@ -40,6 +41,7 @@ h2 {
 
 @media only screen and (min-width: 357px) {
   h2 {
+    font-weight: 500;
     font-size: 18px;
   }
 }
@@ -66,6 +68,7 @@ h2 {
   }
 
   h2 {
+    font-weight: 500;
     padding: 3% 5% 3%;
   }
   .wrapper .img-dhruv {
@@ -82,6 +85,7 @@ h2 {
     padding: 0 5% 0;
   }
   h2 {
+    font-weight: 500;
     font-size: 40px;
   }
 
@@ -95,6 +99,7 @@ h2 {
     /* padding-bottom: 5%; */
   }
   h2 {
+    font-weight: 500;
     font-size: 46px;
     padding: 3% 5% 3%;
   }
@@ -120,6 +125,7 @@ h2 {
   }
 
   h2 {
+    font-weight: 500;
     font-size: 66px;
     padding: 3% 5% 3%;
   }
