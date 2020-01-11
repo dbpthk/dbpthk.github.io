@@ -66,10 +66,10 @@ $(document).ready(function() {
     statusS.empty();
     statusM.empty();
 
-    if (name.length < 5) {
+    if (name.length < 4) {
       event.preventDefault();
       statusN.append(
-        "<div>&#9888 Name needs to be at least 5 characters long</div>"
+        "<div>&#9888 Name needs to be at least 4 characters long</div>"
       );
     }
 
@@ -83,10 +83,10 @@ $(document).ready(function() {
       event.preventDefault();
       statusS.append("<div>&#9888 Subject is not valid</div>");
     }
-    if (message.length <= 10) {
+    if (message.length <= 5) {
       event.preventDefault();
       statusM.append(
-        "<div>&#9888 Message needs to be at least 10 characters long</div>"
+        "<div>&#9888 Message needs to be at least 5 characters long</div>"
       );
     }
   });
