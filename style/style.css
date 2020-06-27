@@ -162,9 +162,12 @@ main {
   padding: 5%;
 }
 
-.home h1 {
+.home h2 {
   color: #333333;
-  font-size: 39px;
+  font-size: 33px;
+  font-family: Marker Felt, fantasy;
+  font-variant: small-caps;
+  letter-spacing: 2px;
   text-align: left;
 }
 
@@ -187,18 +190,20 @@ main {
   grid-template-rows: 20% auto;
 }
 
-.home-presentation .intro-box h5 {
-  font-size: 29px;
-  font-weight: 500;
+.home-presentation .intro-box h1 {
+  font-size: 26px;
+  font-family: Marker Felt, fantasy;
+  font-weight: 600;
+  font-variant: small-caps;
 }
 
-.home-presentation .myname h5 {
-  background: linear-gradient(45deg, #000000, #2d2d2e, #010008, #2196f3);
+.home-presentation .myname h1 {
+  background: linear-gradient(60deg, #000000, #2d2d2e, #010008, #2196f3);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   max-width: -webkit-max-content;
   max-width: max-content;
-  animation: animateT 3s linear infinite;
+  animation: animateT 1s linear infinite;
 }
 
 @keyframes animateT {
@@ -358,8 +363,11 @@ main {
 }
 
 .about-info span {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  font-family: Marker Felt, fantasy;
+  font-weight: 600;
+  font-variant: small-caps;
 }
 
 .about .grid-container {
@@ -389,8 +397,10 @@ main {
 }
 
 .about h3 {
+  font-family: Marker Felt, fantasy;
+  font-weight: 600;
+  font-variant: small-caps;
   font-size: 24px;
-  font-weight: 500;
   background: linear-gradient(45deg, #ff0000, #696969, #808080, #a9a9a9, #c0c0c0, #000000, #696969, #808080, #a9a9a9, #c0c0c0);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -398,6 +408,7 @@ main {
 }
 
 .myskills-container {
+  margin-top: -30px !important;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -414,6 +425,7 @@ main {
   text-align: center;
   overflow: hidden;
   transition: 0.5s;
+  margin-top: 30px;
 }
 
 .myskills-container .card:hover {
@@ -480,11 +492,34 @@ main {
 .myskills-container .text {
   position: relative;
   margin-top: 20px;
-  color: #777;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
   transition: 0.5s;
+}
+
+.myskills-container .html_text .text {
+  color: #eb6227;
+}
+
+.myskills-container .css_text .text {
+  color: #23f734;
+}
+
+.myskills-container .javascript_text .text {
+  color: #f7df1e;
+}
+
+.myskills-container .wordpress_text .text {
+  color: #1f8dbd;
+}
+
+.myskills-container .photoshop_text .text {
+  color: #524dff;
+}
+
+.myskills-container .illustrator_text .text {
+  color: #ff9a00;
 }
 
 .myskills-container .card:hover .text {
@@ -515,17 +550,32 @@ main {
 
 .myskills-container .card:nth-child(1) svg circle:nth-child(2) {
   stroke-dashoffset: 132;
-  stroke: #00ff43;
+  stroke: #eb6227;
 }
 
 .myskills-container .card:nth-child(2) svg circle:nth-child(2) {
   stroke-dashoffset: 176;
-  stroke: #00a1ff;
+  stroke: #23f734;
 }
 
 .myskills-container .card:nth-child(3) svg circle:nth-child(2) {
   stroke-dashoffset: 286;
-  stroke: #ff04f7;
+  stroke: #f7df1e;
+}
+
+.myskills-container .card:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: 264;
+  stroke: #1f8dbd;
+}
+
+.myskills-container .card:nth-child(5) svg circle:nth-child(2) {
+  stroke-dashoffset: 110;
+  stroke: #524dff;
+}
+
+.myskills-container .card:nth-child(6) svg circle:nth-child(2) {
+  stroke-dashoffset: 198;
+  stroke: #ff9a00;
 }
 
 .projects {
@@ -909,9 +959,6 @@ textarea:focus {
   .home-presentation .intro-box p {
     font-size: 16px;
   }
-  .home-presentation .intro-box h5 {
-    font-size: 22px;
-  }
   .crossfade-images {
     max-width: 90%;
   }
@@ -951,6 +998,9 @@ textarea:focus {
 }
 
 @media screen and (max-width: 1300px) {
+  .home-presentation .intro-box h1 {
+    font-size: 22px;
+  }
   .application-content {
     grid-gap: 2%;
   }
@@ -975,7 +1025,7 @@ textarea:focus {
     transition: 0.5s ease-in;
     padding-bottom: 15%;
   }
-  .home h1 {
+  .home h2 {
     font-size: 29px;
   }
   .home-content {
@@ -1023,7 +1073,7 @@ textarea:focus {
   .home {
     grid-gap: 5%;
   }
-  .home h1 {
+  .home h2 {
     font-size: 24px;
   }
   .home {
@@ -1121,6 +1171,9 @@ textarea:focus {
 }
 
 @media screen and (max-width: 850px) {
+  .home h2 {
+    font-size: 26px;
+  }
   .home-content .crossfade-images {
     transition: 0.5s ease;
     max-height: 453px;
@@ -1176,10 +1229,10 @@ textarea:focus {
     max-width: 95%;
     margin-left: 2.5%;
   }
-  .home h1 {
+  .home h2 {
     font-size: 20px;
   }
-  .home-presentation .intro-box h5 {
+  .home-presentation .intro-box h1 {
     font-size: 20px;
   }
   .home-content .crossfade-images {
@@ -1199,14 +1252,8 @@ textarea:focus {
   .home-content .getbutton a span {
     display: none;
   }
-  .about-info span {
-    font-size: 16px;
-  }
   .about p {
     font-size: 14px;
-  }
-  .about h3 {
-    font-size: 20px;
   }
   .myskills-container {
     display: grid;
@@ -1214,8 +1261,8 @@ textarea:focus {
     grid-template-rows: 100%;
   }
   .myskills-container .card {
-    width: 160px;
-    height: 200px;
+    width: 170px;
+    height: 210px;
   }
   .projects {
     max-width: 95%;
@@ -1412,6 +1459,9 @@ textarea:focus {
   }
   .about .circular-square {
     height: 200px;
+    width: 200px;
+  }
+  .myskills-container .card {
     width: 200px;
   }
   .application h1,

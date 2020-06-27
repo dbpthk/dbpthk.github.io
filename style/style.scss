@@ -194,10 +194,14 @@ main {
   padding: 5%;
 
   //top heading
-  h1 {
+  h2 {
     color: #333333;
-    font-size: 39px;
+    font-size: 33px;
+    font-family: Marker Felt, fantasy;
+    font-variant: small-caps;
+    letter-spacing: 2px;
     text-align: left;
+    // font-weight: 100;
   }
 }
 
@@ -221,22 +225,24 @@ main {
   position: relative;
   display: grid;
   grid-template-rows: 20% auto;
-  h5 {
-    font-size: 29px;
-    font-weight: 500;
+  h1 {
+    font-size: 26px;
+    font-family: Marker Felt, fantasy;
+    font-weight: 600;
+    font-variant: small-caps;
   }
 }
 
 //myname
-.home-presentation .myname h5 {
-  background: linear-gradient(45deg, #000000, #2d2d2e, #010008, #2196f3);
+.home-presentation .myname h1 {
+  background: linear-gradient(60deg, #000000, #2d2d2e, #010008, #2196f3);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   max-width: max-content;
-  animation: animateT 3s linear infinite;
+  animation: animateT 1s linear infinite;
 }
 
-//for changing gradient color on h5 text on home page and h3 text on about page
+//for changing gradient color on h1 text on home page and h3 text on about page
 @keyframes animateT {
   0% {
     filter: hue-rotate(0deg);
@@ -402,8 +408,11 @@ main {
 
 //my name
 .about-info span {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  font-family: Marker Felt, fantasy;
+  font-weight: 600;
+  font-variant: small-caps;
 }
 //about top content
 .about .grid-container {
@@ -437,8 +446,10 @@ main {
 
 //my skills heading
 .about h3 {
+  font-family: Marker Felt, fantasy;
+  font-weight: 600;
+  font-variant: small-caps;
   font-size: 24px;
-  font-weight: 500;
   background: linear-gradient(
     45deg,
     #ff0000,
@@ -459,6 +470,7 @@ main {
 
 //skills container
 .myskills-container {
+  margin-top: -30px !important;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -476,6 +488,7 @@ main {
   text-align: center;
   overflow: hidden;
   transition: 0.5s;
+  margin-top: 30px;
 }
 .myskills-container .card:hover {
   transform: translateY(-10px);
@@ -545,11 +558,34 @@ main {
 .myskills-container .text {
   position: relative;
   margin-top: 20px;
-  color: #777;
+  // color: #777;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
   transition: 0.5s;
+}
+
+//for each container text color
+.myskills-container .html_text .text {
+  color: #eb6227;
+}
+.myskills-container .css_text .text {
+  color: #23f734;
+}
+
+.myskills-container .javascript_text .text {
+  color: #f7df1e;
+}
+
+.myskills-container .wordpress_text .text {
+  color: #1f8dbd;
+}
+.myskills-container .photoshop_text .text {
+  color: #524dff;
+}
+
+.myskills-container .illustrator_text .text {
+  color: #ff9a00;
 }
 
 .myskills-container .card:hover .text {
@@ -580,15 +616,27 @@ main {
 }
 .myskills-container .card:nth-child(1) svg circle:nth-child(2) {
   stroke-dashoffset: 440 - (440 * 70)/100;
-  stroke: #00ff43;
+  stroke: #eb6227;
 }
 .myskills-container .card:nth-child(2) svg circle:nth-child(2) {
   stroke-dashoffset: 440 - (440 * 60)/100;
-  stroke: #00a1ff;
+  stroke: #23f734;
 }
 .myskills-container .card:nth-child(3) svg circle:nth-child(2) {
   stroke-dashoffset: 440 - (440 * 35)/100;
-  stroke: #ff04f7;
+  stroke: #f7df1e;
+}
+.myskills-container .card:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: 440 - (440 * 40)/100;
+  stroke: #1f8dbd;
+}
+.myskills-container .card:nth-child(5) svg circle:nth-child(2) {
+  stroke-dashoffset: 440 - (440 * 75)/100;
+  stroke: #524dff;
+}
+.myskills-container .card:nth-child(6) svg circle:nth-child(2) {
+  stroke-dashoffset: 440 - (440 * 55)/100;
+  stroke: #ff9a00;
 }
 
 //Projects page
@@ -1025,8 +1073,8 @@ textarea:focus {
     p {
       font-size: 16px;
     }
-    h5 {
-      font-size: 22px;
+    h1 {
+      // font-size: 22px;
     }
   }
   //image container
@@ -1084,6 +1132,11 @@ textarea:focus {
 }
 
 @media screen and (max-width: 1300px) {
+  //home page
+
+  .home-presentation .intro-box h1 {
+    font-size: 22px;
+  }
   //appliation page
 
   .application-content {
@@ -1113,7 +1166,7 @@ textarea:focus {
   .home {
     transition: 0.5s ease-in;
     padding-bottom: 15%;
-    h1 {
+    h2 {
       font-size: 29px;
     }
   }
@@ -1169,7 +1222,7 @@ textarea:focus {
   //homepage
   .home {
     grid-gap: 5%;
-    h1 {
+    h2 {
       font-size: 24px;
     }
   }
@@ -1298,6 +1351,9 @@ textarea:focus {
 
 //only for crossfade images on home page
 @media screen and (max-width: 850px) {
+  .home h2 {
+    font-size: 26px;
+  }
   //image container
   .home-content .crossfade-images {
     transition: 0.5s ease;
@@ -1373,11 +1429,11 @@ textarea:focus {
   }
 
   //home page
-  .home h1 {
+  .home h2 {
     font-size: 20px;
   }
 
-  .home-presentation .intro-box h5 {
+  .home-presentation .intro-box h1 {
     font-size: 20px;
   }
   //image container
@@ -1405,7 +1461,7 @@ textarea:focus {
   //about page
 
   .about-info span {
-    font-size: 16px;
+    // font-size: 16px;
   }
 
   .about p {
@@ -1414,7 +1470,7 @@ textarea:focus {
 
   //my skills heading
   .about h3 {
-    font-size: 20px;
+    // font-size: 20px;
   }
 
   .myskills-container {
@@ -1424,8 +1480,8 @@ textarea:focus {
   }
 
   .myskills-container .card {
-    width: 160px;
-    height: 200px;
+    width: 170px;
+    height: 210px;
   }
 
   //projects page
@@ -1704,6 +1760,9 @@ textarea:focus {
 
   .about .circular-square {
     height: 200px;
+    width: 200px;
+  }
+  .myskills-container .card {
     width: 200px;
   }
 
