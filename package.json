@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
-    "gsap": "^3.3.4"
+    "gsap": "^3.6.0"
   },
   "description": ""
 }
