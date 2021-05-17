@@ -1277,6 +1277,8 @@ textarea:focus {
     max-height: 428px;
   }
   .home-content .getbutton a {
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 1px solid #2196f3;
     box-shadow: 0 5px 5px #0191ff;
   }
@@ -1442,6 +1444,9 @@ textarea:focus {
   .home-content .crossfade-images {
     transition: 0.5s ease;
     max-height: 350px;
+  }
+  .home-content .getbutton a {
+    margin-top: 40px;
   }
 }
 
